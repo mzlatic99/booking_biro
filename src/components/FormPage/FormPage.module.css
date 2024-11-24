@@ -1,0 +1,59 @@
+.formPage {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgb(75, 75, 75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+}
+
+.cancel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.cancel a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submitButton {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+  .form {
+    max-width: 450px;
+  }
+}

@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
-import logo from '../../assets/images/logo-small.png';
+import { ReactComponent as SvgLogo } from '../../assets/logo/logo-small.svg';
 
 const Navbar = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   // State hooks
-  const [burgerClass, setBurgerClass] = useState(`${styles.burgerBar} ${styles.unclicked}`);
+  const [burgerClass, setBurgerClass] = useState(
+    `${styles.burgerBar} ${styles.unclicked}`
+  );
   const [menuClass, setMenuClass] = useState(`${styles.menu} ${styles.hidden}`);
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
@@ -21,10 +26,16 @@ const Navbar = () => {
   };
 
   return (
-    <div style={{ width: '100%'}}>
+    <div className={styles.main}>
       <nav className={styles.nav}>
-        <img className={styles.logo} src={logo} alt="Logo" style={{textAlign: "center"}}></img>
-        <div className={styles.burgerMenu} onClick={updateMenu}>
+        <SvgLogo
+          className={isHomePage ? styles.logo : ''}
+          style={{ textAlign: 'center', height: '20px' }}
+        />
+
+        <div
+          className={styles.burgerMenu}
+          onClick={updateMenu}>
           <div className={burgerClass}></div>
           <div className={burgerClass}></div>
           <div className={burgerClass}></div>
@@ -32,10 +43,42 @@ const Navbar = () => {
       </nav>
       <div className={menuClass}>
         <ul className={styles.menuItems}>
-            <li>Home</li>
-            <li>Artists</li>
-            <li>Let's talk</li>
-            <li>About</li>
+          <li>
+            <NavLink
+              to='/'
+              className={({ isActive }) =>
+                isActive ? styles['active-link'] : styles['inactive-link']
+              }>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/artists'
+              className={({ isActive }) =>
+                isActive ? styles['active-link'] : styles['inactive-link']
+              }>
+              Artists
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/info'
+              className={({ isActive }) =>
+                isActive ? styles['active-link'] : styles['inactive-link']
+              }>
+              Info
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/form'
+              className={({ isActive }) =>
+                isActive ? styles['active-link'] : styles['inactive-link']
+              }>
+              Let's talk
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>

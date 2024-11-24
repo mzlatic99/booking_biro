@@ -1,0 +1,50 @@
+.list {
+  list-style: none;
+  padding: 20px;
+}
+
+.isActive {
+  color: #b90000;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 54px;
+}
+
+.notActive {
+  color: rgba(185, 0, 0, 0.2);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 54px;
+}
+
+.artistNavButtonActive {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 40px;
+  font-weight: 700;
+  color: #b90000;
+}
+
+.artistNavButtonNotActive {
+  display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .isActive {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .notActive {
+    font-size: 100px;
+    line-height: 100px;
+  }
+
+  .artistNavButtonActive {
+    font-size: 100px;
+    line-height: 54px;
+  }
+}
