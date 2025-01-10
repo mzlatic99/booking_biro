@@ -7,6 +7,7 @@ import FormPage from './components/FormPage/FormPage';
 import HomePage from './components/HomePage/HomePage';
 import Artist from './components/Artist/Artist';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Nemanja from './components/Artist/Nemanja';
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
           <Routes>
             <Route
               path='/artists/:artistId'
-              element={<Artist />}
+              element={<Nemanja />}
             />
           </Routes>
           <Routes>

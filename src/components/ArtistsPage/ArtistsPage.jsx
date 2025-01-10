@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './ArtistsPage.module.css';
-import test1 from '../../assets/images/test1.png';
+import nemanjaImage from '../../assets/images/nemanja1.JPG';
 
 export default function ArtistsPage() {
   const navigate = useNavigate();
   const [selectedArtist, setSelectedArtist] = useState({
     id: 0,
-    image: test1,
+    image: nemanjaImage,
   });
 
   const [lastClickedArtist, setLastClickedArtist] = useState(null);
 
   const artists = [
     {
-      id: 0,
-      name: 'ARTIST 1',
-      image: test1,
+      id: 'nemanja',
+      name: 'NEMANJA',
+      image: nemanjaImage,
     },
     {
       id: 1,
@@ -71,7 +71,9 @@ export default function ArtistsPage() {
           ? `url(${selectedArtist.image})`
           : `none`,
         backgroundSize: 'cover',
+        backgroundColor: '#fff',
         backgroundPosition: 'center',
+        backgroundBlendMode: 'luminosity',
         transition: 'background-image 0.5s ease-in-out',
         width: '100vw',
         height: '100vh',

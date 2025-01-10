@@ -29,8 +29,8 @@ const Navbar = () => {
     <div className={styles.main}>
       <nav className={styles.nav}>
         <SvgLogo
-          className={isHomePage ? styles.logo : ''}
-          style={{ textAlign: 'center', height: '20px' }}
+          className={isHomePage ? styles.logoNav : ''}
+          style={{ textAlign: 'center', height: '16px' }}
         />
 
         <div

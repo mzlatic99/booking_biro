@@ -16,8 +16,8 @@
   padding: 1.25em;
 }
 
-.logo {
-  height: 20px;
+.logoNav {
+  height: 16px;
 }
 
 .burgerMenu {
@@ -121,6 +121,12 @@
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
 }
 
+@media only screen and (min-width: 360px) {
+  .logoNav {
+    height: 18px;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .burgerMenu {
     display: none;
@@ -146,7 +152,7 @@
     padding-top: 1em;
   }
 
-  .logo {
+  .logoNav {
     display: none;
   }
 }
