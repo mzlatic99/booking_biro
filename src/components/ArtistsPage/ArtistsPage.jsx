@@ -1,16 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './ArtistsPage.module.css';
-import nemanjaImage from '../../assets/images/nemanja1.JPG';
+import nemanjaImage from '../../assets/images/nemanja/nemanja1.JPG';
+import dunjalukImage from '../../assets/images/dunjaluk/dunjaluk1.jpg';
+import dunjalukMobileImage from '../../assets/images/dunjaluk/dunjaluk2.jpg';
 
 export default function ArtistsPage() {
   const navigate = useNavigate();
   const [selectedArtist, setSelectedArtist] = useState({
-    id: 0,
+    id: 'nemanja',
     image: nemanjaImage,
   });
 
-  const [lastClickedArtist, setLastClickedArtist] = useState(null);
+  const [isMobileView, setIsMobileView] = useState(
+    window.matchMedia('(max-width: 900px)').matches
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 900px)');
+    const handleMediaChange = (e) => {
+      setIsMobileView(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleMediaChange);
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaChange);
+    };
+  }, []);
 
   const artists = [
     {
@@ -19,9 +35,9 @@ export default function ArtistsPage() {
       image: nemanjaImage,
     },
     {
-      id: 1,
-      name: 'ARTIST 2',
-      image: 'url-to-artist2-image.jpg',
+      id: 'dunjaluk',
+      name: 'DUNJALUK',
+      image: isMobileView ? dunjalukMobileImage : dunjalukImage,
     },
     {
       id: 2,
@@ -51,11 +67,10 @@ export default function ArtistsPage() {
   ];
 
   const handleArtistClick = (artist) => {
-    if (lastClickedArtist?.id === artist.id) {
+    if (selectedArtist.id === artist.id) {
       navigate(`/artists/${artist.id}`);
     } else {
       setSelectedArtist(artist);
-      setLastClickedArtist(artist);
     }
   };
 
@@ -97,7 +112,7 @@ export default function ArtistsPage() {
             {artist.name}
             <button
               onClick={(e) => {
-                e.stopPropagation(); // Prevent artist click
+                e.stopPropagation();
                 handleButtonClick(artist);
               }}
               className={

@@ -6,14 +6,13 @@ import { ReactComponent as SvgLogo } from '../../assets/logo/logo-small.svg';
 const Navbar = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-  // State hooks
+
   const [burgerClass, setBurgerClass] = useState(
     `${styles.burgerBar} ${styles.unclicked}`
   );
   const [menuClass, setMenuClass] = useState(`${styles.menu} ${styles.hidden}`);
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
-  // Toggle burger menu
   const updateMenu = () => {
     if (!isMenuClicked) {
       setBurgerClass(`${styles.burgerBar} ${styles.clicked}`);
@@ -25,6 +24,12 @@ const Navbar = () => {
     setIsMenuClicked(!isMenuClicked);
   };
 
+  const handleMenuItemClick = () => {
+    if (isMenuClicked) {
+      updateMenu();
+    }
+  };
+
   return (
     <div className={styles.main}>
       <nav className={styles.nav}>
@@ -32,7 +37,6 @@ const Navbar = () => {
           className={isHomePage ? styles.logoNav : ''}
           style={{ textAlign: 'center', height: '16px' }}
         />
-
         <div
           className={styles.burgerMenu}
           onClick={updateMenu}>
@@ -48,7 +52,8 @@ const Navbar = () => {
               to='/'
               className={({ isActive }) =>
                 isActive ? styles['active-link'] : styles['inactive-link']
-              }>
+              }
+              onClick={handleMenuItemClick}>
               Home
             </NavLink>
           </li>
@@ -57,7 +62,8 @@ const Navbar = () => {
               to='/artists'
               className={({ isActive }) =>
                 isActive ? styles['active-link'] : styles['inactive-link']
-              }>
+              }
+              onClick={handleMenuItemClick}>
               Artists
             </NavLink>
           </li>
@@ -66,7 +72,8 @@ const Navbar = () => {
               to='/info'
               className={({ isActive }) =>
                 isActive ? styles['active-link'] : styles['inactive-link']
-              }>
+              }
+              onClick={handleMenuItemClick}>
               Info
             </NavLink>
           </li>
@@ -75,7 +82,8 @@ const Navbar = () => {
               to='/form'
               className={({ isActive }) =>
                 isActive ? styles['active-link'] : styles['inactive-link']
-              }>
+              }
+              onClick={handleMenuItemClick}>
               Let's talk
             </NavLink>
           </li>
