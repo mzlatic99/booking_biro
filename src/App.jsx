@@ -9,6 +9,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import Nemanja from './components/Artist/Nemanja/Nemanja';
 import LoadingPage from './components/LoadingPage/LoadingPage';
 import Dunjaluk from './components/Artist/Dunjaluk/Dunjaluk';
+import Nemecek from './components/Artist/Nemecek/Nemecek';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,6 +53,11 @@ const App = () => {
                 <Route
                   path='/artists/dunjaluk'
                   element={<Dunjaluk />}
+                  errorElement={<ErrorPage />}
+                />
+                <Route
+                  path='/artists/nemecek'
+                  element={<Nemecek />}
                   errorElement={<ErrorPage />}
                 />
                 <Route

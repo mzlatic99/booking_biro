@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import dunjalukHeroImage from '../../../assets/images/dunjaluk/dunjaluk1.jpg';
-import styles from './Dunjaluk.module.css';
+import styles from '../Artist.module.css';
 
 export default function Dunjaluk() {
   const location = useLocation();

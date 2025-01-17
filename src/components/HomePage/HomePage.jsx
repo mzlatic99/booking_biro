@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from './HomePage.module.css';
 import { ReactComponent as SvgLogo } from '../../assets/logo/logo-large.svg';
-import heroLarge1 from '../../assets/images/hero-large1.png';
-import heroLarge2 from '../../assets/images/hero-large2.png';
-import heroLarge3 from '../../assets/images/test1.png';
+import heroLarge1 from '../../assets/images/homepage/MarinaPavicic-Home1.webp';
+import heroLarge2 from '../../assets/images/homepage/MarinaUzelac-Home2.webp';
+import heroLarge3 from '../../assets/images/homepage/MarinaUzelac-Home3.webp';
 
 export default function HomePage() {
   const images = [heroLarge1, heroLarge2, heroLarge3];
@@ -47,7 +47,9 @@ export default function HomePage() {
           }`}
           style={{
             backgroundImage: `url(${image})`,
-          }}></div>
+          }}>
+          <span className={styles.author}>Marina Uzelac ©</span>
+        </div>
       ))}
     </div>
   );

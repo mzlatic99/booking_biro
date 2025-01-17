@@ -4,6 +4,7 @@ import styles from './ArtistsPage.module.css';
 import nemanjaImage from '../../assets/images/nemanja/nemanja1.JPG';
 import dunjalukImage from '../../assets/images/dunjaluk/dunjaluk1.jpg';
 import dunjalukMobileImage from '../../assets/images/dunjaluk/dunjaluk2.jpg';
+import nemecekImage from '../../assets/images/nemecek/nemecek1.jpg';
 
 export default function ArtistsPage() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ export default function ArtistsPage() {
   const [isMobileView, setIsMobileView] = useState(
     window.matchMedia('(max-width: 900px)').matches
   );
+  const [backgroundImageLoaded, setBackgroundImageLoaded] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 900px)');
@@ -28,6 +30,12 @@ export default function ArtistsPage() {
     };
   }, []);
 
+  useEffect(() => {
+    const img = new Image();
+    img.src = selectedArtist.image;
+    img.onload = () => setBackgroundImageLoaded(true);
+  }, [selectedArtist.image]);
+
   const artists = [
     {
       id: 'nemanja',
@@ -40,29 +48,29 @@ export default function ArtistsPage() {
       image: isMobileView ? dunjalukMobileImage : dunjalukImage,
     },
     {
-      id: 2,
-      name: 'ARTIST 3',
-      image: 'url-to-artist3-image.jpg',
+      id: 'nemecek',
+      name: 'NEMEČEK',
+      image: nemecekImage,
     },
     {
-      id: 3,
+      id: 'artist4',
       name: 'ARTIST 4',
-      image: 'url-to-artist4-image.jpg',
+      image: 4,
     },
     {
-      id: 4,
+      id: 'artist5',
       name: 'ARTIST 5',
-      image: 'url-to-artist5-image.jpg',
+      image: 5,
     },
     {
-      id: 5,
+      id: 'artist6',
       name: 'ARTIST 6',
-      image: 'url-to-artist6-image.jpg',
+      image: 6,
     },
     {
-      id: 6,
-      name: 'ARTIST 7',
-      image: 'url-to-artist7-image.jpg',
+      id: 'artist7',
+      name: 'ARTIST7',
+      image: 7,
     },
   ];
 
@@ -71,6 +79,7 @@ export default function ArtistsPage() {
       navigate(`/artists/${artist.id}`);
     } else {
       setSelectedArtist(artist);
+      setBackgroundImageLoaded(false); // Reset loading state for new image
     }
   };
 
@@ -82,14 +91,13 @@ export default function ArtistsPage() {
     <div
       className={styles.main}
       style={{
-        backgroundImage: selectedArtist.image
+        backgroundImage: backgroundImageLoaded
           ? `url(${selectedArtist.image})`
-          : `none`,
+          : `url('placeholder-image.jpg')`,
         backgroundSize: 'cover',
         backgroundColor: '#fff',
         backgroundPosition: 'center',
         backgroundBlendMode: 'luminosity',
-        transition: 'background-image 0.5s ease-in-out',
         width: '100vw',
         height: '100vh',
         display: 'flex',

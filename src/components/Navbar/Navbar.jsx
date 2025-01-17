@@ -33,10 +33,9 @@ const Navbar = () => {
   return (
     <div className={styles.main}>
       <nav className={styles.nav}>
-        <SvgLogo
-          className={isHomePage ? styles.logoNav : ''}
-          style={{ textAlign: 'center', height: '16px' }}
-        />
+        <NavLink to='/'>
+          <SvgLogo className={isHomePage ? styles.logoNav : ''} />
+        </NavLink>
         <div
           className={styles.burgerMenu}
           onClick={updateMenu}>

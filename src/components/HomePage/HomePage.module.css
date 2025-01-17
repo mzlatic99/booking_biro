@@ -4,6 +4,19 @@
   font-weight: 500;
 }
 
+.author {
+  display: flex;
+  justify-self: start;
+  height: 100%;
+  margin-top: 3em;
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
 .backgroundImage {
   position: absolute;
   top: 0;
@@ -35,7 +48,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   color: #b90000;
   font-weight: 500;
   font-size: 15px;
@@ -49,6 +62,10 @@
   display: none;
 }
 
+.homeMain p {
+  line-height: 17px;
+}
+
 @media only screen and (min-width: 600px) {
   .homeMain {
     width: 100vw;
@@ -56,7 +73,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 
   .logo {
@@ -71,6 +87,14 @@
     width: 75%;
     align-self: start;
     line-height: 22px;
+  }
+
+  .author {
+    font-size: 20px;
+    line-height: 22px;
+    position: fixed;
+    top: 85%;
+    padding-left: 1em;
   }
 }
 
