@@ -5,6 +5,8 @@ import nemanjaImage from '../../assets/images/nemanja/nemanja1.JPG';
 import dunjalukImage from '../../assets/images/dunjaluk/dunjaluk1.jpg';
 import dunjalukMobileImage from '../../assets/images/dunjaluk/dunjaluk2.jpg';
 import nemecekImage from '../../assets/images/nemecek/nemecek1.jpg';
+import chuiImage from '../../assets/images/chui/chui1.jpg';
+import psecaplazaImage from '../../assets/images/psecaplaza/psecaplaza1.jpeg';
 
 export default function ArtistsPage() {
   const navigate = useNavigate();
@@ -42,7 +44,7 @@ export default function ArtistsPage() {
     document.addEventListener('touchmove', preventZoom, { passive: false });
 
     return () => {
-      // Cleanup: Remove event listeners and reset styles
+      // Cleanup
       document.body.style.overflow = 'auto';
       document.removeEventListener('wheel', preventZoom);
       document.removeEventListener('gesturestart', preventGesture);
@@ -87,14 +89,14 @@ export default function ArtistsPage() {
       image: nemecekImage,
     },
     {
-      id: 'artist4',
-      name: 'ARTIST 4',
-      image: 4,
+      id: 'chui',
+      name: 'CHUI',
+      image: chuiImage,
     },
     {
-      id: 'artist5',
-      name: 'ARTIST 5',
-      image: 5,
+      id: 'psecaplaza',
+      name: 'PSEĆA PLAŽA',
+      image: psecaplazaImage,
     },
     {
       id: 'artist6',
@@ -113,7 +115,7 @@ export default function ArtistsPage() {
       navigate(`/artists/${artist.id}`);
     } else {
       setSelectedArtist(artist);
-      setBackgroundImageLoaded(false); // Reset loading state for new image
+      setBackgroundImageLoaded(false);
     }
   };
 

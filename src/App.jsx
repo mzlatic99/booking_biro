@@ -11,6 +11,8 @@ import LoadingPage from './components/LoadingPage/LoadingPage';
 import Dunjaluk from './components/Artist/Dunjaluk/Dunjaluk';
 import Nemecek from './components/Artist/Nemecek/Nemecek';
 import './App.css';
+import Chui from './components/Artist/Chui/Chui';
+import PsecaPlaza from './components/Artist/PsecaPlaza/PsecaPlaza';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -59,6 +61,16 @@ const App = () => {
                 <Route
                   path='/artists/nemecek'
                   element={<Nemecek />}
+                  errorElement={<ErrorPage />}
+                />
+                <Route
+                  path='/artists/chui'
+                  element={<Chui />}
+                  errorElement={<ErrorPage />}
+                />
+                <Route
+                  path='/artists/psecaplaza'
+                  element={<PsecaPlaza />}
                   errorElement={<ErrorPage />}
                 />
                 <Route

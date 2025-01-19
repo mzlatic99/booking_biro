@@ -7,7 +7,7 @@
 .author {
   display: flex;
   position: fixed;
-  top: 95%;
+  top: 96%;
   justify-self: start;
   font-weight: 500;
   font-size: 15px;
@@ -69,7 +69,7 @@
 @media only screen and (min-width: 600px) {
   .homeMain {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,6 +78,7 @@
   .logo {
     display: inline;
     width: 100%;
+    height: 20%;
   }
 
   .homeMain p {
