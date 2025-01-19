@@ -7,14 +7,41 @@ import heroLarge3 from '../../assets/images/homepage/MarinaUzelac-Home3.webp';
 
 export default function HomePage() {
   const images = [heroLarge1, heroLarge2, heroLarge3];
+  const authors = ['Mirna Pavičić', 'Marina Uzelac', 'Marina Uzelac'];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
+    // Disable scrolling
     document.body.style.overflow = 'hidden';
 
+    // Disable zooming
+    const preventZoom = (event) => {
+      if (event.ctrlKey || event.touches?.length > 1) {
+        event.preventDefault();
+      }
+    };
+
+    const preventGesture = (event) => event.preventDefault();
+
+    document.addEventListener('wheel', preventZoom, { passive: false });
+    document.addEventListener('gesturestart', preventGesture, {
+      passive: false,
+    });
+    document.addEventListener('gesturechange', preventGesture, {
+      passive: false,
+    });
+    document.addEventListener('gestureend', preventGesture, { passive: false });
+    document.addEventListener('touchmove', preventZoom, { passive: false });
+
     return () => {
+      // Cleanup: Remove event listeners and reset styles
       document.body.style.overflow = 'auto';
+      document.removeEventListener('wheel', preventZoom);
+      document.removeEventListener('gesturestart', preventGesture);
+      document.removeEventListener('gesturechange', preventGesture);
+      document.removeEventListener('gestureend', preventGesture);
+      document.removeEventListener('touchmove', preventZoom);
     };
   }, []);
 
@@ -23,7 +50,7 @@ export default function HomePage() {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, authors.length]);
 
   return (
     <div className={styles.homeMain}>
@@ -48,7 +75,7 @@ export default function HomePage() {
           style={{
             backgroundImage: `url(${image})`,
           }}>
-          <span className={styles.author}>Marina Uzelac ©</span>
+          <span className={styles.author}>{authors[index]} ©</span>
         </div>
       ))}
     </div>

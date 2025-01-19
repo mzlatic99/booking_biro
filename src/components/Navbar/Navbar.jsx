@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import { ReactComponent as SvgLogo } from '../../assets/logo/logo-small.svg';
@@ -6,12 +6,19 @@ import { ReactComponent as SvgLogo } from '../../assets/logo/logo-small.svg';
 const Navbar = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const [burgerClass, setBurgerClass] = useState(
     `${styles.burgerBar} ${styles.unclicked}`
   );
   const [menuClass, setMenuClass] = useState(`${styles.menu} ${styles.hidden}`);
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const updateMenu = () => {
     if (!isMenuClicked) {
@@ -34,8 +41,11 @@ const Navbar = () => {
     <div className={styles.main}>
       <nav className={styles.nav}>
         <NavLink to='/'>
-          <SvgLogo className={isHomePage ? styles.logoNav : ''} />
+          {!(isHomePage && screenWidth >= 600) && (
+            <SvgLogo className={[styles.logoNav]} />
+          )}
         </NavLink>
+
         <div
           className={styles.burgerMenu}
           onClick={updateMenu}>

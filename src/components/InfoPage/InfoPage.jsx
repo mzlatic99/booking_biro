@@ -1,7 +1,42 @@
+import React, { useEffect } from 'react';
 import styles from './InfoPage.module.css';
 import infoImage from '../../assets/images/infopage/MarinaPavicic-Info.jpg';
 
 export default function InfoPage() {
+  useEffect(() => {
+    // Disable scrolling
+    document.body.style.overflow = 'hidden';
+
+    // Disable zooming
+    const preventZoom = (event) => {
+      if (event.ctrlKey || event.touches?.length > 1) {
+        event.preventDefault();
+      }
+    };
+
+    const preventGesture = (event) => event.preventDefault();
+
+    document.addEventListener('wheel', preventZoom, { passive: false });
+    document.addEventListener('gesturestart', preventGesture, {
+      passive: false,
+    });
+    document.addEventListener('gesturechange', preventGesture, {
+      passive: false,
+    });
+    document.addEventListener('gestureend', preventGesture, { passive: false });
+    document.addEventListener('touchmove', preventZoom, { passive: false });
+
+    return () => {
+      // Cleanup: Remove event listeners and reset styles
+      document.body.style.overflow = 'auto';
+      document.removeEventListener('wheel', preventZoom);
+      document.removeEventListener('gesturestart', preventGesture);
+      document.removeEventListener('gesturechange', preventGesture);
+      document.removeEventListener('gestureend', preventGesture);
+      document.removeEventListener('touchmove', preventZoom);
+    };
+  }, []);
+
   return (
     <div
       className={styles.infoMain}
@@ -10,9 +45,8 @@ export default function InfoPage() {
         backgroundSize: 'cover',
         backgroundColor: '#fff',
         backgroundPosition: 'center',
-        width: '100%',
-        height: '100vh',
       }}>
+      <div></div>
       <div className={styles.textContainer}>
         <div className={styles.lauraInfo}>
           <span className={styles.infoBoldText}>Laura Matijašević</span>
@@ -28,7 +62,7 @@ export default function InfoPage() {
           <p>Veprinačka 5, Zagreb Croatia</p>
         </div>
       </div>
-      <span className={styles.author}>Marina Uzelac ©</span>
+      <span className={styles.author}>Mirna Pavičić ©</span>
     </div>
   );
 }

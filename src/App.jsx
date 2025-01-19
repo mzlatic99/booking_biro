@@ -10,6 +10,7 @@ import Nemanja from './components/Artist/Nemanja/Nemanja';
 import LoadingPage from './components/LoadingPage/LoadingPage';
 import Dunjaluk from './components/Artist/Dunjaluk/Dunjaluk';
 import Nemecek from './components/Artist/Nemecek/Nemecek';
+import './App.css';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);

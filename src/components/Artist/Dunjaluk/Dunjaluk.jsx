@@ -10,6 +10,35 @@ export default function Dunjaluk() {
     console.log('Route changed to:', location.pathname);
   }, [location]);
 
+  useEffect(() => {
+    // Disable zooming
+    const preventZoom = (event) => {
+      if (event.ctrlKey || event.touches?.length > 1) {
+        event.preventDefault();
+      }
+    };
+
+    const preventGesture = (event) => event.preventDefault();
+
+    document.addEventListener('wheel', preventZoom, { passive: false });
+    document.addEventListener('gesturestart', preventGesture, {
+      passive: false,
+    });
+    document.addEventListener('gesturechange', preventGesture, {
+      passive: false,
+    });
+    document.addEventListener('gestureend', preventGesture, { passive: false });
+    document.addEventListener('touchmove', preventZoom, { passive: false });
+
+    return () => {
+      document.removeEventListener('wheel', preventZoom);
+      document.removeEventListener('gesturestart', preventGesture);
+      document.removeEventListener('gesturechange', preventGesture);
+      document.removeEventListener('gestureend', preventGesture);
+      document.removeEventListener('touchmove', preventZoom);
+    };
+  }, []);
+
   return (
     <div className={styles.body}>
       <div className={styles.hero}>
