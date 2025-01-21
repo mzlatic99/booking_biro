@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f8f9fa;
+  background-color: #fff;
   color: #212529;
   text-align: center;
   padding: 20px;
@@ -24,7 +24,7 @@
 .errorButton {
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #007bff;
+  background-color: #b90000;
   color: #fff;
   text-decoration: none;
   border: none;
@@ -34,5 +34,5 @@
 }
 
 .errorButton:hover {
-  background-color: #0056b3;
+  background-color: #7a0000;
 }

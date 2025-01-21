@@ -41,50 +41,41 @@ const App = () => {
                 <Route
                   path='/'
                   element={<HomePage />}
-                  errorElement={<ErrorPage />}
                 />
                 <Route
                   path='/artists'
                   element={<ArtistsPage />}
-                  errorElement={<ErrorPage />}
                 />
                 <Route
                   path='/artists/nemanja'
                   element={<Nemanja />}
-                  errorElement={<ErrorPage />}
                 />
                 <Route
                   path='/artists/dunjaluk'
                   element={<Dunjaluk />}
-                  errorElement={<ErrorPage />}
                 />
                 <Route
                   path='/artists/nemecek'
                   element={<Nemecek />}
-                  errorElement={<ErrorPage />}
                 />
                 <Route
                   path='/artists/chui'
                   element={<Chui />}
-                  errorElement={<ErrorPage />}
                 />
                 <Route
                   path='/artists/psecaplaza'
                   element={<PsecaPlaza />}
-                  errorElement={<ErrorPage />}
                 />
                 <Route
                   path='/info'
                   element={<InfoPage />}
-                  errorElement={<ErrorPage />}
                 />
                 <Route
                   path='/form'
                   element={<FormPage />}
-                  errorElement={<ErrorPage />}
                 />
                 <Route
-                  path='/*'
+                  path='*'
                   element={<ErrorPage />}
                 />
               </Routes>
