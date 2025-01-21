@@ -10,7 +10,7 @@ export default function ErrorPage() {
         The page you are looking for does not exist.
       </p>
       <Link
-        to='/'
+        to={`${process.env.PUBLIC_URL}/`}
         className={styles.errorButton}>
         Go Back to Home
       </Link>

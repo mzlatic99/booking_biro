@@ -113,7 +113,7 @@ export default function PsecaPlaza() {
           <a href='https://www.facebook.com/PsecaPlaza'>Facebook</a>
         </div>
         <span className={styles.backButton}>
-          <Link to='/artists'>BACK</Link>
+          <Link to={`${process.env.PUBLIC_URL}/artists`}>BACK</Link>
         </span>
       </main>
     </div>

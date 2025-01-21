@@ -88,7 +88,7 @@ export default function FormPage() {
   return (
     <div className={styles.formPage}>
       <span className={styles.cancel}>
-        <Link to='/'>X</Link>
+        <Link to={`${process.env.PUBLIC_URL}/`}>X</Link>
       </span>
       <div className={styles.form}>
         <form onSubmit={handleSubmit}>

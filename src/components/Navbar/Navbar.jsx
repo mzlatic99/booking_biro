@@ -58,7 +58,7 @@ const Navbar = () => {
         <ul className={styles.menuItems}>
           <li>
             <NavLink
-              to='/'
+              to={`${process.env.PUBLIC_URL}/`}
               className={({ isActive }) =>
                 isActive ? styles['active-link'] : styles['inactive-link']
               }
@@ -68,7 +68,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to='/artists'
+              to={`${process.env.PUBLIC_URL}/artists`}
               className={({ isActive }) =>
                 isActive ? styles['active-link'] : styles['inactive-link']
               }
@@ -78,7 +78,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to='/info'
+              to={`${process.env.PUBLIC_URL}/info`}
               className={({ isActive }) =>
                 isActive ? styles['active-link'] : styles['inactive-link']
               }
@@ -88,7 +88,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to='/form'
+              to={`${process.env.PUBLIC_URL}/form`}
               className={({ isActive }) =>
                 isActive ? styles['active-link'] : styles['inactive-link']
               }
