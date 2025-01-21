@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './ArtistsPage.module.css';
-import nemanjaImage from '../../assets/images/nemanja/nemanja1.JPG';
+import nemanjaImage from '../../assets/images/nemanja/nemanja1.jpg';
 import dunjalukImage from '../../assets/images/dunjaluk/dunjaluk1.jpg';
 import dunjalukMobileImage from '../../assets/images/dunjaluk/dunjaluk2.jpg';
 import nemecekImage from '../../assets/images/nemecek/nemecek1.jpg';

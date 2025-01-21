@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import nemanjaHeroImage from '../../../assets/images/nemanja/nemanja1.JPG';
+import nemanjaHeroImage from '../../../assets/images/nemanja/nemanja1.jpg';
 import styles from '../Artist.module.css';
 
 export default function Nemanja() {

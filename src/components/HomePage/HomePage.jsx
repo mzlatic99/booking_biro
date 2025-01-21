@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import styles from './HomePage.module.css';
 import { ReactComponent as SvgLogo } from '../../assets/logo/logo-large.svg';
-import heroLarge1 from '../../assets/images/homepage/MarinaPavicic-Home1.webp';
-import heroLarge2 from '../../assets/images/homepage/MarinaUzelac-Home2.webp';
-import heroLarge3 from '../../assets/images/homepage/MarinaUzelac-Home3.webp';
+import heroLarge1 from '../../assets/images/homepage/Home1.jpg';
+import heroLarge2 from '../../assets/images/homepage/Home2.jpg';
+import heroLarge3 from '../../assets/images/homepage/Home3.jpg';
 
 export default function HomePage() {
   const images = [heroLarge1, heroLarge2, heroLarge3];

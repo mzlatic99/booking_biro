@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './InfoPage.module.css';
-import infoImage from '../../assets/images/infopage/MarinaPavicic-Info.jpg';
+import infoImage from '../../assets/images/infopage/info.jpg';
 
 export default function InfoPage() {
   useEffect(() => {

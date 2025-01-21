@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './LoadingPage.module.css';
-import loadingVideo from '../../assets/videos/Loading-4K.mp4';
+import loadingVideo from '../../assets/videos/Loading-4K_3_5sec.mp4';
 
 export default function LoadingPage({ onLoadingComplete }) {
   useEffect(() => {

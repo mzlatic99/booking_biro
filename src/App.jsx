@@ -84,7 +84,7 @@ const App = () => {
                   errorElement={<ErrorPage />}
                 />
                 <Route
-                  path='*'
+                  path='/*'
                   element={<ErrorPage />}
                 />
               </Routes>
