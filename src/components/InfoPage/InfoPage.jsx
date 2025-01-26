@@ -1,8 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './InfoPage.module.css';
-import infoImage from '../../assets/images/infopage/info.jpg';
+import infoImage from '../../assets/images/infopage/infofliped.jpg';
+import infoImageMobile from '../../assets/images/infopage/info.jpg';
 
 export default function InfoPage() {
+  const [isMobileView, setIsMobileView] = useState(
+    window.matchMedia('(max-width: 900px)').matches
+  );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 900px)');
+    const handleMediaChange = (e) => {
+      setIsMobileView(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleMediaChange);
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaChange);
+    };
+  }, []);
+
   useEffect(() => {
     // Disable scrolling
     document.body.style.overflow = 'hidden';
@@ -41,7 +58,7 @@ export default function InfoPage() {
     <div
       className={styles.infoMain}
       style={{
-        backgroundImage: `url(${infoImage})`,
+        backgroundImage: `url(${isMobileView ? infoImageMobile : infoImage})`,
         backgroundSize: 'cover',
         backgroundColor: '#fff',
         backgroundPosition: 'center',
