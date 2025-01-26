@@ -61,18 +61,16 @@ export default function Chui() {
         <p>
           Chui is the brainchild of Toni Starešinić, a keyboard and synth player
           well established on the Croatian music scene. The band was founded in
-          2012.,with original members recording the first two albums.
-        </p>
-        <p>
-          Vojkan Jocić, six times awarded “Best jazz saxophone player in
-          Croatia”, joined the band in 2014. and in 2016. drummer Ivan Levačić (
-          ABOP, ELEVEN) and bass player Konrad Lovrenčić (Elemental) completed
-          the present lineup. They released their first self-titled album in
-          2012. on Dancing Bear Records and “The Second Arrival” followed next
-          year to widespread critical acclaim. Their third album “Third Sun from
-          the Stone” was released in 2015. and voted the best Croatian album of
-          the year by music critics. In 2017. Chui released a big band album
-          “Chui ovu glazbu” performed alongside Croatian Radio-Television Jazz
+          2012.,with original members recording the first two albums. Vojkan
+          Jocić, six times awarded “Best jazz saxophone player in Croatia”,
+          joined the band in 2014. and in 2016. drummer Ivan Levačić ( ABOP,
+          ELEVEN) and bass player Konrad Lovrenčić (Elemental) completed the
+          present lineup. They released their first self-titled album in 2012.
+          on Dancing Bear Records and “The Second Arrival” followed next year to
+          widespread critical acclaim. Their third album “Third Sun from the
+          Stone” was released in 2015. and voted the best Croatian album of the
+          year by music critics. In 2017. Chui released a big band album “Chui
+          ovu glazbu” performed alongside Croatian Radio-Television Jazz
           Orchestra and awarded with “Best jazz album”and “Best jazz
           performance” by Porin (Croatian equivalent of Grammy). In 2019. the
           band released their fifth studio album “Iz kapetanovog dnevnika”
@@ -82,30 +80,27 @@ export default function Chui() {
           album of the year by music critics and "Best instrumental" album and
           "Best instrumental performance" by Porin award.
         </p>
-        <p>
-          Chui performed at Eurosonic Noorderslag (Netherlands), Dimensions
-          Festival (Croatia), INmusic Festival (Croatia), Kaunas Biennial
-          (Lithuania), MENT Festival (Slovenia), BUSH (Hungary) and numerous
-          other jazz and alter- native festivals at the side of Kamasi Washing-
-          ton, Medeski Scofield Martin &amp; Wood, etc.
-        </p>
-        <p>
-          Chui also composed music for Walther Ruttmanns 1927. Movie "Berlin:
-          Die Sinfonie der Großstadt" and performed the score in theaters and
-          film festivals.
-        </p>
-
         <iframe
           src='https://www.youtube.com/embed/rfabahR3zKY?si=UC4jq-m_Sq2Ad0cX'
           title='YouTube video player'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
           referrerpolicy='strict-origin-when-cross-origin'
           allowfullscreen></iframe>
+        <p>
+          Chui performed at Eurosonic Noorderslag (Netherlands), Dimensions
+          Festival (Croatia), INmusic Festival (Croatia), Kaunas Biennial
+          (Lithuania), MENT Festival (Slovenia), BUSH (Hungary) and numerous
+          other jazz and alter- native festivals at the side of Kamasi Washing-
+          ton, Medeski Scofield Martin &amp; Wood, etc. Chui also composed music
+          for Walther Ruttmanns 1927. Movie "Berlin: Die Sinfonie der Großstadt"
+          and performed the score in theaters and film festivals.
+        </p>
+
         <div className={styles.links}>
           <a href='https://www.youtube.com/channel/UCx6jMjC7FO8DgMAdDSzLEQQ'>
             Youtube
           </a>
-          <a href='https://open.spotify.com/artist/6r4grwIpbO1DBsLh44nNHj?si=6LrphDE9QU2Wltaf7_SsRw '>
+          <a href='https://open.spotify.com/artist/6r4grwIpbO1DBsLh44nNHj?si=6LrphDE9QU2Wltaf7_SsRw'>
             Spotify
           </a>
           <a href='https://chuitheband.bandcamp.com/'>Bandcamp</a>

@@ -79,20 +79,24 @@ export default function Dunjaluk() {
           interested in traditional songs and all the different musical contexts
           that can provide them with a new life. She’s constantly looking for
           her roots, linking past to present to future. She finds herself doing
-          the same in the music that she makes.
+          the same in the music that she makes. Luka Čapeta is a musician from
+          Zagreb, Croatia. Since he started playing guitar as his main
+          instrument, Luka has been exploring various aspects of making music,
+          ranging from composition, production, performance to education. Since
+          his studies at the Vienna Music Institute, he has produced and
+          composed music for contemporary dance, theatre and film, and played in
+          many different bands and projects from Zagreb and the surrounding
+          region. Rooted in electronic, ambient, jazz, and classical music, Luka
+          is constantly evolving his vocabulary by experimenting with
+          traditional and world music, noise, avantgarde aesthetics, creating a
+          unique approach to performance and sound.
         </p>
-        <p>
-          Luka Čapeta is a musician from Zagreb, Croatia. Since he started
-          playing guitar as his main instrument, Luka has been exploring various
-          aspects of making music, ranging from composition, production,
-          performance to education. Since his studies at the Vienna Music
-          Institute, he has produced and composed music for contemporary dance,
-          theatre and film, and played in many different bands and projects from
-          Zagreb and the surrounding region. Rooted in electronic, ambient,
-          jazz, and classical music, Luka is constantly evolving his vocabulary
-          by experimenting with traditional and world music, noise, avantgarde
-          aesthetics, creating a unique approach to performance and sound.
-        </p>
+        <iframe
+          src='https://www.youtube.com/embed/Cy7xSDh4vs0?si=LKQYwXdAM2l8z6X2'
+          title='YouTube video player'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          referrerpolicy='strict-origin-when-cross-origin'
+          allowfullscreen></iframe>
         <p>
           In November 2022, Dunjaluk released their first album. In 2022, they
           have been selected for the MOST Music Programme, whose mission is to
@@ -100,15 +104,9 @@ export default function Dunjaluk() {
           people in the world music market.
         </p>
 
-        <iframe
-          src='https://www.youtube.com/embed/Cy7xSDh4vs0?si=LKQYwXdAM2l8z6X2'
-          title='YouTube video player'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-          referrerpolicy='strict-origin-when-cross-origin'
-          allowfullscreen></iframe>
         <div className={styles.links}>
           <a href='https://www.youtube.com/@dunjaluk9545'>Youtube</a>
-          <a href='https://open.spotify.com/artist/7kRy3KxXOOYRi7QFQeHc9c?si=hyzHHr-dRXmkVzoEDd6vJA '>
+          <a href='https://open.spotify.com/artist/7kRy3KxXOOYRi7QFQeHc9c?si=hyzHHr-dRXmkVzoEDd6vJA'>
             Spotify
           </a>
           <a href='https://dunjaluk.bandcamp.com/album/dunjaluk'>Bandcamp</a>

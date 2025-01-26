@@ -59,7 +59,7 @@ export default function InfoPage() {
           <p>lina@44bookingbiro.com</p>
         </div>
         <div className={styles.address}>
-          <p>Veprinačka 5, Zagreb Croatia</p>
+          <p>Zagreb, Croatia</p>
         </div>
       </div>
       <span className={styles.author}>Mirna Pavičić ©</span>

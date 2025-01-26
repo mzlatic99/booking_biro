@@ -7,6 +7,10 @@ import dunjalukMobileImage from '../../assets/images/dunjaluk/dunjaluk2.jpg';
 import nemecekImage from '../../assets/images/nemecek/nemecek1.jpg';
 import chuiImage from '../../assets/images/chui/chui1.jpg';
 import psecaplazaImage from '../../assets/images/psecaplaza/psecaplaza1.jpeg';
+import funkshuiImage from '../../assets/images/funkshui/funkshui1.jpeg';
+import funkshuiMobileImage from '../../assets/images/funkshui/funkshui_mobile1.jpeg';
+import aracatacaImage from '../../assets/images/aracataca/aracataca1.jpg';
+import aracatacaMobileImage from '../../assets/images/aracataca/aracataca_mobile1.jpg';
 
 export default function ArtistsPage() {
   const navigate = useNavigate();
@@ -18,6 +22,19 @@ export default function ArtistsPage() {
   const [isMobileView, setIsMobileView] = useState(
     window.matchMedia('(max-width: 900px)').matches
   );
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 900px)');
+    const handleMediaChange = (e) => {
+      setIsMobileView(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleMediaChange);
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaChange);
+    };
+  }, []);
+
   const [backgroundImageLoaded, setBackgroundImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -55,18 +72,6 @@ export default function ArtistsPage() {
   }, []);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 900px)');
-    const handleMediaChange = (e) => {
-      setIsMobileView(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleMediaChange);
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaChange);
-    };
-  }, []);
-
-  useEffect(() => {
     const img = new Image();
     img.src = selectedArtist.image;
     img.onload = () => setBackgroundImageLoaded(true);
@@ -99,14 +104,14 @@ export default function ArtistsPage() {
       image: psecaplazaImage,
     },
     {
-      id: 'artist6',
-      name: 'ARTIST 6',
-      image: 6,
+      id: 'funkshui',
+      name: 'FUNK SHUI',
+      image: isMobileView ? funkshuiMobileImage : funkshuiImage,
     },
     {
-      id: 'artist7',
-      name: 'ARTIST7',
-      image: 7,
+      id: 'aracataca',
+      name: 'ARACATACA',
+      image: isMobileView ? aracatacaMobileImage : aracatacaImage,
     },
   ];
 

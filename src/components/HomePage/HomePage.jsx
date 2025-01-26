@@ -56,7 +56,7 @@ export default function HomePage() {
     <div className={styles.homeMain}>
       <SvgLogo className={styles.logo} />
       <p>
-        Booking top-tier bands and artists for events, festivals, and private
+        Booking top-tier bands and artists for events, festivals, and
         performances. With a deep network of emerging talent and established
         acts across various genres, we connect clients with the perfect musical
         match for any occasion.

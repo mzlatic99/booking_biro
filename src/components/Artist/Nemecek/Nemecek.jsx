@@ -70,13 +70,17 @@ export default function Nemanja() {
           Croatia, Serbia, and Slovenia, captivating audiences at various
           festivals and venues. Their recent tours across the Czech Republic,
           Slovakia, and Hungary have further cemented their reputation as one of
-          Croatia’s most boundary-pushing musical acts.
+          Croatia’s most boundary-pushing musical acts. In 2024, Nemeček became
+          the first Croatian band to win the prestigious “Milan Mladenović”
+          award for the best song in the region with ‘Mirila,’ a standout track
+          from their latest album Prokletije II.
         </p>
-        <p>
-          In 2024, Nemeček became the first Croatian band to win the prestigious
-          “Milan Mladenović” award for the best song in the region with
-          ‘Mirila,’ a standout track from their latest album Prokletije II.
-        </p>
+        <iframe
+          src='https://www.youtube.com/embed/S7AnhX-86bY?si=9X4wjvKFPF9-KC2p'
+          title='YouTube video player'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          referrerpolicy='strict-origin-when-cross-origin'
+          allowfullscreen></iframe>
         <p>
           Now poised for a broader European presence, Nemeček is ideal for
           festivals and venues seeking to deliver audiences a transformative
@@ -86,12 +90,7 @@ export default function Nemanja() {
           will leave you immersed in the tension of ancient echoes and modern
           edges - a visceral experience that transcends borders and eras alike.
         </p>
-        <iframe
-          src='https://www.youtube.com/embed/S7AnhX-86bY?si=9X4wjvKFPF9-KC2p'
-          title='YouTube video player'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-          referrerpolicy='strict-origin-when-cross-origin'
-          allowfullscreen></iframe>
+
         <div className={styles.links}>
           <a href='https://www.youtube.com/@nemecek9297'>Youtube</a>
           <a href='https://open.spotify.com/artist/60DIILnL7DiczpvCsug7kK'>

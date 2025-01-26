@@ -13,6 +13,8 @@ import Nemecek from './components/Artist/Nemecek/Nemecek';
 import './App.css';
 import Chui from './components/Artist/Chui/Chui';
 import PsecaPlaza from './components/Artist/PsecaPlaza/PsecaPlaza';
+import Funkshui from './components/Artist/Funkshui/Funkshui';
+import Aracataca from './components/Artist/Aracataca/Aracataca';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -65,6 +67,14 @@ const App = () => {
                 <Route
                   path='/artists/psecaplaza'
                   element={<PsecaPlaza />}
+                />
+                <Route
+                  path='/artists/funkshui'
+                  element={<Funkshui />}
+                />
+                <Route
+                  path='/artists/aracataca'
+                  element={<Aracataca />}
                 />
                 <Route
                   path='/info'

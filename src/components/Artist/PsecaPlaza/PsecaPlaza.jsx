@@ -67,10 +67,8 @@ export default function PsecaPlaza() {
           beginning of their exploration into the intersection of vintage
           psychedelia and tropical influences. This was followed by their
           sophomore album, Povratak u lagunu br.07 (2019), which continued to
-          develop their signature blend of vibrant, experimental soundscapes.
-        </p>
-        <p>
-          In 2020, the band released the EP Nijanse, a project that reflected a
+          develop their signature blend of vibrant, experimental soundscapes. In
+          2020, the band released the EP Nijanse, a project that reflected a
           more introspective and nuanced approach to their music. Alongside
           these major releases, Pseća plaža has also produced several singles,
           collaborating with acclaimed acts such as Nemanja and Porto Morto,
@@ -79,26 +77,20 @@ export default function PsecaPlaza() {
           their ability to adapt their style to complement diverse musical
           contexts.
         </p>
-        <p>
-          After a prolonged hiatus, Pseća plaža is making a much-anticipated
-          return to the scene with a fresh artistic vision and renewed energy.
-          Their upcoming album, Teško je imati glavu promises to deliver a bold
-          new chapter in their musical journey, combining their signature
-          psychedelic elements with fresh ideas and sounds.
-        </p>
-        <p>
-          After a prolonged hiatus, Pseća plaža is making a much-anticipated
-          return to the scene with a fresh artistic vision and renewed energy.
-          Their upcoming album, Teško je imati glavu promises to deliver a bold
-          new chapter in their musical journey, combining their signature
-          psychedelic elements with fresh ideas and sounds.
-        </p>
         <iframe
           src='https://www.youtube.com/embed/60_06fs-sXo?si=JVWD-3SyVYq-fFO1'
           title='YouTube video player'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
           referrerpolicy='strict-origin-when-cross-origin'
           allowfullscreen></iframe>
+        <p>
+          After a prolonged hiatus, Pseća plaža is making a much-anticipated
+          return to the scene with a fresh artistic vision and renewed energy.
+          Their upcoming album, Teško je imati glavu promises to deliver a bold
+          new chapter in their musical journey, combining their signature
+          psychedelic elements with fresh ideas and sounds.
+        </p>
+
         <div className={styles.links}>
           <a href='https://www.youtube.com/channel/UCRLRvxomv7cNoqi_Px_EArQ'>
             Youtube
@@ -106,7 +98,7 @@ export default function PsecaPlaza() {
           <a href='https://open.spotify.com/artist/2TQiIkMgMLAO0PbSHqvDFS?si=jx9hTNr7SteO1_kKcFJB0A'>
             Spotify
           </a>
-          <a href='https://psecaplaza.bandcamp.com/track/nemanja-pse-a-pla-a-udne-stvari '>
+          <a href='https://psecaplaza.bandcamp.com/track/nemanja-pse-a-pla-a-udne-stvari'>
             Bandcamp
           </a>
           <a href='https://www.instagram.com/pseca_plaza/?hl=en'>Instagram</a>
