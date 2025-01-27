@@ -11,10 +11,10 @@ import chuiImage from '../../assets/images/chui/chui_bw1.jpg';
 import chuiMobileImage from '../../assets/images/chui/chui_mobile_bw1.jpg';
 import psecaplazaImage from '../../assets/images/psecaplaza/psecaplaza_bw1.jpg';
 import psecaplazaMobileImage from '../../assets/images/psecaplaza/psecaplaza_mobile_bw1.jpg';
-import funkshuiImage from '../../assets/images/funkshui/funkshui1.jpeg';
-import funkshuiMobileImage from '../../assets/images/funkshui/funkshui_mobile1.jpeg';
-import aracatacaImage from '../../assets/images/aracataca/aracataca1.jpg';
-import aracatacaMobileImage from '../../assets/images/aracataca/aracataca_mobile1.jpg';
+import funkshuiImage from '../../assets/images/funkshui/funkshui_bw1.png';
+import funkshuiMobileImage from '../../assets/images/funkshui/funkshui_mobile_bw1.png';
+import aracatacaImage from '../../assets/images/aracataca/aracataca_bw1.png';
+import aracatacaMobileImage from '../../assets/images/aracataca/aracataca_mobile_bw1.png';
 
 export default function ArtistsPage() {
   const navigate = useNavigate();
