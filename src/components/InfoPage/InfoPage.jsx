@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import styles from './InfoPage.module.css';
-import infoImage from '../../assets/images/infopage/infofliped.jpg';
-import infoImageMobile from '../../assets/images/infopage/info.jpg';
+import infoImage from '../../assets/images/infopage/info_fliped.jpg';
+import infoImageMobile from '../../assets/images/infopage/info_mobile.jpg';
 
 export default function InfoPage() {
   const [isMobileView, setIsMobileView] = useState(
-    window.matchMedia('(max-width: 900px)').matches
+    window.matchMedia('(max-width: 600px)').matches
   );
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 900px)');
+    const mediaQuery = window.matchMedia('(max-width: 600px)');
     const handleMediaChange = (e) => {
       setIsMobileView(e.matches);
     };

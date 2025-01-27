@@ -1,32 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import aracatacaHeroImage from '../../../assets/images/aracataca/aracataca1.jpg';
-import aracatacaHeroImageMobile from '../../../assets/images/aracataca/aracataca_mobile1.jpg';
 import styles from '../Artist.module.css';
 
 export default function Aracataca() {
-  const location = useLocation();
-
-  const [isMobileView, setIsMobileView] = useState(
-    window.matchMedia('(max-width: 900px)').matches
-  );
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 900px)');
-    const handleMediaChange = (e) => {
-      setIsMobileView(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleMediaChange);
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaChange);
-    };
-  }, []);
-
-  useEffect(() => {
-    console.log('Route changed to:', location.pathname);
-  }, [location]);
-
   useEffect(() => {
     // Disable zooming
     const preventZoom = (event) => {
@@ -57,11 +34,12 @@ export default function Aracataca() {
   }, []);
 
   return (
-    <div className={styles.body}>
-      <div className={styles.hero}>
+    <div className={styles.artistBody}>
+      <div className={styles.artistHero}>
         <img
-          src={isMobileView ? aracatacaHeroImageMobile : aracatacaHeroImage}
+          src={aracatacaHeroImage}
           alt='profile'
+          className={styles.artistHeroImage}
         />
         <h1>ARACATACA</h1>
       </div>

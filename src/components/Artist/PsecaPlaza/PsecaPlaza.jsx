@@ -1,15 +1,9 @@
 import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import psecaplazaHeroImage from '../../../assets/images/psecaplaza/psecaplaza1.jpeg';
+import { Link } from 'react-router-dom';
+import psecaplazaHeroImage from '../../../assets/images/psecaplaza/psecaplaza1.jpg';
 import styles from '../Artist.module.css';
 
 export default function PsecaPlaza() {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.log('Route changed to:', location.pathname);
-  }, [location]);
-
   useEffect(() => {
     // Disable zooming
     const preventZoom = (event) => {
@@ -40,11 +34,12 @@ export default function PsecaPlaza() {
   }, []);
 
   return (
-    <div className={styles.body}>
-      <div className={styles.hero}>
+    <div className={styles.artistBody}>
+      <div className={styles.artistHero}>
         <img
           src={psecaplazaHeroImage}
           alt='profile'
+          className={styles.artistHeroImage}
         />
         <h1>PSEĆA PLAŽA</h1>
       </div>

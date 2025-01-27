@@ -1,32 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import funkshuiHeroImage from '../../../assets/images/funkshui/funkshui1.jpeg';
-import funkshuiHeroImageMobile from '../../../assets/images/funkshui/funkshui_mobile1.jpeg';
 import styles from '../Artist.module.css';
 
 export default function Funkshui() {
-  const location = useLocation();
-
-  const [isMobileView, setIsMobileView] = useState(
-    window.matchMedia('(max-width: 900px)').matches
-  );
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 900px)');
-    const handleMediaChange = (e) => {
-      setIsMobileView(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleMediaChange);
-    return () => {
-      mediaQuery.removeEventListener('change', handleMediaChange);
-    };
-  }, []);
-
-  useEffect(() => {
-    console.log('Route changed to:', location.pathname);
-  }, [location]);
-
   useEffect(() => {
     // Disable zooming
     const preventZoom = (event) => {
@@ -57,11 +34,12 @@ export default function Funkshui() {
   }, []);
 
   return (
-    <div className={styles.body}>
-      <div className={styles.hero}>
+    <div className={styles.artistBody}>
+      <div className={styles.artistHero}>
         <img
-          src={isMobileView ? funkshuiHeroImageMobile : funkshuiHeroImage}
+          src={funkshuiHeroImage}
           alt='profile'
+          className={styles.artistHeroImage}
         />
         <h1>FUNK SHUI</h1>
       </div>

@@ -1,15 +1,9 @@
 import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import chuiHeroImage from '../../../assets/images/chui/chui1.jpg';
 import styles from '../Artist.module.css';
 
 export default function Chui() {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.log('Route changed to:', location.pathname);
-  }, [location]);
-
   useEffect(() => {
     // Disable zooming
     const preventZoom = (event) => {
@@ -40,11 +34,12 @@ export default function Chui() {
   }, []);
 
   return (
-    <div className={styles.body}>
-      <div className={styles.hero}>
+    <div className={styles.artistBody}>
+      <div className={styles.artistHero}>
         <img
           src={chuiHeroImage}
           alt='profile'
+          className={styles.artistHeroImage}
         />
         <h1>CHUI</h1>
       </div>

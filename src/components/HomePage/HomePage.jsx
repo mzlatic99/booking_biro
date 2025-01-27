@@ -4,18 +4,36 @@ import { ReactComponent as SvgLogo } from '../../assets/logo/logo-large.svg';
 import heroLarge1 from '../../assets/images/homepage/Home1.jpg';
 import heroLarge2 from '../../assets/images/homepage/Home2.jpg';
 import heroLarge3 from '../../assets/images/homepage/Home3.jpg';
+import heroSmall1 from '../../assets/images/homepage/HomeMobile1.jpg';
+import heroSmall2 from '../../assets/images/homepage/HomeMobile2.jpg';
+import heroSmall3 from '../../assets/images/homepage/HomeMobile3.jpg';
 
 export default function HomePage() {
-  const images = [heroLarge1, heroLarge2, heroLarge3];
+  const heroLargeImages = [heroLarge1, heroLarge2, heroLarge3];
+  const heroSmallImages = [heroSmall1, heroSmall2, heroSmall3];
   const authors = ['Mirna Pavičić', 'Marina Uzelac', 'Marina Uzelac'];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isMobileView, setIsMobileView] = useState(
+    window.matchMedia('(max-width: 600px)').matches
+  );
 
   useEffect(() => {
-    // Disable scrolling
+    const mediaQuery = window.matchMedia('(max-width: 600px)');
+    const handleMediaChange = (e) => {
+      setIsMobileView(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleMediaChange);
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Disable scrolling and zooming
     document.body.style.overflow = 'hidden';
 
-    // Disable zooming
     const preventZoom = (event) => {
       if (event.ctrlKey || event.touches?.length > 1) {
         event.preventDefault();
@@ -35,7 +53,6 @@ export default function HomePage() {
     document.addEventListener('touchmove', preventZoom, { passive: false });
 
     return () => {
-      // Cleanup: Remove event listeners and reset styles
       document.body.style.overflow = 'auto';
       document.removeEventListener('wheel', preventZoom);
       document.removeEventListener('gesturestart', preventGesture);
@@ -47,10 +64,14 @@ export default function HomePage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % heroLargeImages.length
+      );
     }, 4000);
     return () => clearInterval(interval);
-  }, [images.length, authors.length]);
+  }, [heroLargeImages.length]);
+
+  const images = isMobileView ? heroSmallImages : heroLargeImages;
 
   return (
     <div className={styles.homeMain}>
