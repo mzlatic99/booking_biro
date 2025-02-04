@@ -7,8 +7,6 @@ import dunjalukImage from '../../assets/images/dunjaluk/dunjaluk_bw1.jpg';
 import dunjalukMobileImage from '../../assets/images/dunjaluk/dunjaluk_mobile_bw1.jpg';
 import nemecekImage from '../../assets/images/nemecek/nemecek_bw1.jpg';
 import nemecekMobileImage from '../../assets/images/nemecek/nemecek_mobile_bw1.jpg';
-import chuiImage from '../../assets/images/chui/chui_bw1.jpg';
-import chuiMobileImage from '../../assets/images/chui/chui_mobile_bw1.jpg';
 import psecaplazaImage from '../../assets/images/psecaplaza/psecaplaza_bw1.jpg';
 import psecaplazaMobileImage from '../../assets/images/psecaplaza/psecaplaza_mobile_bw1.jpg';
 import funkshuiImage from '../../assets/images/funkshui/funkshui_bw1.png';
@@ -39,11 +37,6 @@ export default function ArtistsPage() {
         id: 'nemecek',
         name: 'NEMEČEK',
         image: { large: nemecekImage, mobile: nemecekMobileImage },
-      },
-      {
-        id: 'chui',
-        name: 'CHUI',
-        image: { large: chuiImage, mobile: chuiMobileImage },
       },
       {
         id: 'psecaplaza',
