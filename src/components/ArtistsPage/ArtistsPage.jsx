@@ -66,6 +66,7 @@ export default function ArtistsPage() {
 
   const [selectedArtist, setSelectedArtist] = useState(artists[0]);
   const [backgroundImageLoaded, setBackgroundImageLoaded] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 600px)');
@@ -85,47 +86,16 @@ export default function ArtistsPage() {
     }
   }, [selectedArtist, isMobileView]);
 
-  useEffect(() => {
-    const disableScrollAndZoom = () => {
-      document.body.style.overflow = 'hidden';
-
-      const preventZoom = (event) => {
-        if (event.ctrlKey || event.touches?.length > 1) event.preventDefault();
-      };
-      const preventGesture = (event) => event.preventDefault();
-
-      document.addEventListener('wheel', preventZoom, { passive: false });
-      document.addEventListener('gesturestart', preventGesture, {
-        passive: false,
-      });
-      document.addEventListener('gesturechange', preventGesture, {
-        passive: false,
-      });
-      document.addEventListener('gestureend', preventGesture, {
-        passive: false,
-      });
-      document.addEventListener('touchmove', preventZoom, { passive: false });
-
-      return () => {
-        document.body.style.overflow = 'auto';
-        document.removeEventListener('wheel', preventZoom);
-        document.removeEventListener('gesturestart', preventGesture);
-        document.removeEventListener('gesturechange', preventGesture);
-        document.removeEventListener('gestureend', preventGesture);
-        document.removeEventListener('touchmove', preventZoom);
-      };
-    };
-
-    const cleanup = disableScrollAndZoom();
-    return cleanup;
-  }, []);
-
   const handleArtistClick = (artist) => {
     if (selectedArtist?.id === artist.id) {
       navigate(`/artists/${artist.id}`);
     } else {
-      setSelectedArtist(artist);
-      setBackgroundImageLoaded(false);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setSelectedArtist(artist);
+        setBackgroundImageLoaded(false);
+        setIsTransitioning(false);
+      }, 300);
     }
   };
 
@@ -139,20 +109,19 @@ export default function ArtistsPage() {
   };
 
   return (
-    <div
-      className={styles.main}
-      style={{
-        backgroundImage: `url(${
-          backgroundImageLoaded ? getBackgroundImage() : 'placeholder-image.jpg'
-        })`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        width: '100vw',
-        height: '100dvh',
-        display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-end',
-      }}>
+    <div className={styles.main}>
+      <div
+        className={`${styles.backgroundImage} ${
+          isTransitioning ? styles.fadeOut : ''
+        }`}
+        style={{
+          backgroundImage: `url(${
+            backgroundImageLoaded
+              ? getBackgroundImage()
+              : 'placeholder-image.jpg'
+          })`,
+        }}></div>
+
       <ul className={styles.list}>
         {artists.map((artist) => (
           <li

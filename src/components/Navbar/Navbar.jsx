@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import { ReactComponent as SvgLogo } from '../../assets/logo/logo-small.svg';
 
 const Navbar = () => {
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
   const [burgerClass, setBurgerClass] = useState(
     `${styles.burgerBar} ${styles.unclicked}`
   );
@@ -31,20 +27,25 @@ const Navbar = () => {
     setIsMenuClicked(!isMenuClicked);
   };
 
-  const handleMenuItemClick = () => {
+  const handleMenuItemClick = (id, event) => {
+    event.preventDefault();
     if (isMenuClicked) {
       updateMenu();
+    }
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <div className={styles.main}>
       <nav className={styles.nav}>
-        <NavLink to='/'>
-          {!(isHomePage && screenWidth >= 600) && (
-            <SvgLogo className={[styles.logoNav]} />
-          )}
-        </NavLink>
+        <a
+          href='#home'
+          onClick={(e) => handleMenuItemClick('home', e)}>
+          {screenWidth < 600 && <SvgLogo className={styles.logoNav} />}
+        </a>
 
         <div
           className={styles.burgerMenu}
@@ -57,44 +58,32 @@ const Navbar = () => {
       <div className={menuClass}>
         <ul className={styles.menuItems}>
           <li>
-            <NavLink
-              to={`${process.env.PUBLIC_URL}/`}
-              className={({ isActive }) =>
-                isActive ? styles['active-link'] : styles['inactive-link']
-              }
-              onClick={handleMenuItemClick}>
+            <a
+              href='#home'
+              onClick={(e) => handleMenuItemClick('home', e)}>
               Home
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink
-              to={`${process.env.PUBLIC_URL}/artists`}
-              className={({ isActive }) =>
-                isActive ? styles['active-link'] : styles['inactive-link']
-              }
-              onClick={handleMenuItemClick}>
+            <a
+              href='#artists'
+              onClick={(e) => handleMenuItemClick('artists', e)}>
               Artists
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink
-              to={`${process.env.PUBLIC_URL}/info`}
-              className={({ isActive }) =>
-                isActive ? styles['active-link'] : styles['inactive-link']
-              }
-              onClick={handleMenuItemClick}>
+            <a
+              href='#info'
+              onClick={(e) => handleMenuItemClick('info', e)}>
               Info
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink
-              to={`${process.env.PUBLIC_URL}/form`}
-              className={({ isActive }) =>
-                isActive ? styles['active-link'] : styles['inactive-link']
-              }
-              onClick={handleMenuItemClick}>
+            <a
+              href='#form'
+              onClick={(e) => handleMenuItemClick('form', e)}>
               Let's talk
-            </NavLink>
+            </a>
           </li>
         </ul>
       </div>

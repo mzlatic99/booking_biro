@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
 import ArtistsPage from './components/ArtistsPage/ArtistsPage';
-import InfoPage from './components/InfoPage/InfoPage';
-import FormPage from './components/FormPage/FormPage';
 import HomePage from './components/HomePage/HomePage';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Nemanja from './components/Artist/Nemanja/Nemanja';
@@ -37,7 +34,6 @@ const App = () => {
           <LoadingPage onLoadingComplete={handleLoadingComplete} />
         ) : (
           <>
-            <Navbar />
             <div>
               <Routes>
                 <Route
@@ -75,14 +71,6 @@ const App = () => {
                 <Route
                   path='/artists/aracataca'
                   element={<Aracataca />}
-                />
-                <Route
-                  path='/info'
-                  element={<InfoPage />}
-                />
-                <Route
-                  path='/form'
-                  element={<FormPage />}
                 />
                 <Route
                   path='*'

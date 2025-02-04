@@ -5,6 +5,9 @@ import styles from '../Artist.module.css';
 
 export default function Dunjaluk() {
   useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+  useEffect(() => {
     // Disable zooming
     const preventZoom = (event) => {
       if (event.ctrlKey || event.touches?.length > 1) {
@@ -111,7 +114,14 @@ export default function Dunjaluk() {
           </a>
         </div>
         <span className={styles.backButton}>
-          <Link to={`${process.env.PUBLIC_URL}/artists`}>BACK</Link>
+          <Link
+            to={{
+              pathname: `${process.env.PUBLIC_URL}/`,
+              hash: '#artists',
+            }}
+            state={{ fromArtistsPage: true }}>
+            BACK
+          </Link>
         </span>
       </main>
     </div>

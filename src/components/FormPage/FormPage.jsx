@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './FormPage.module.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 
 export default function FormPage() {
@@ -87,9 +86,6 @@ export default function FormPage() {
 
   return (
     <div className={styles.formPage}>
-      <span className={styles.cancel}>
-        <Link to={`${process.env.PUBLIC_URL}/`}>X</Link>
-      </span>
       <div className={styles.form}>
         <form onSubmit={handleSubmit}>
           <label>

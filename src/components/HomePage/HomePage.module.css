@@ -1,3 +1,9 @@
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .list {
   list-style-type: none;
   font-family: 'General Sans';
@@ -15,7 +21,6 @@
   padding-right: 1.25em;
   color: #3f3f3f;
   mix-blend-mode: difference;
-  height: 100%;
 }
 
 .backgroundImage {
@@ -45,9 +50,9 @@
   z-index: -9;
 }
 
-.homeMain {
-  width: 100vw;
+.homeHero {
   height: 100dvh;
+  width: 100%;
   display: flex;
   color: #b90000;
   font-weight: 500;
@@ -61,9 +66,9 @@
   display: none;
 }
 
-.homeMain p {
+.homeHero p {
   line-height: 17px;
-  position: fixed;
+  position: absolute;
   display: flex;
   height: 100dvh;
   align-items: center;
@@ -72,32 +77,26 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .homeMain {
-    width: 100vw;
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .homeMain p {
-    display: inline;
-    position: relative;
-    height: auto;
-  }
-
   .logo {
-    display: inline;
+    display: block;
     width: 100%;
     height: auto;
   }
 
-  .homeMain p {
-    margin-top: 2em;
+  .homeHero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .homeHero p {
     font-size: 20px;
     width: 75%;
+    height: auto;
     align-self: start;
     line-height: 22px;
+    position: relative;
   }
 
   .author {
@@ -108,7 +107,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  .homeMain p {
+  .homeHero p {
     font-size: 20px;
     width: 50%;
     align-self: start;
