@@ -53,7 +53,30 @@
   color: #b90000;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 800px) and (min-height: 650px) {
+  .isActive {
+    font-size: 80px;
+    line-height: 80px;
+    border-bottom: 6px solid #b90000;
+    height: 82px;
+  }
+
+  .notActive {
+    font-size: 80px;
+    line-height: 80px;
+    height: 82px;
+  }
+
+  .list {
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (min-height: 900px) {
   .isActive {
     font-size: 100px;
     line-height: 100px;
