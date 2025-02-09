@@ -8,7 +8,6 @@ import LoadingPage from './components/LoadingPage/LoadingPage';
 import Dunjaluk from './components/Artist/Dunjaluk/Dunjaluk';
 import Nemecek from './components/Artist/Nemecek/Nemecek';
 import './App.css';
-import Chui from './components/Artist/Chui/Chui';
 import PsecaPlaza from './components/Artist/PsecaPlaza/PsecaPlaza';
 import Funkshui from './components/Artist/Funkshui/Funkshui';
 import Aracataca from './components/Artist/Aracataca/Aracataca';
@@ -55,10 +54,6 @@ const App = () => {
                 <Route
                   path='/artists/nemecek'
                   element={<Nemecek />}
-                />
-                <Route
-                  path='/artists/chui'
-                  element={<Chui />}
                 />
                 <Route
                   path='/artists/psecaplaza'
