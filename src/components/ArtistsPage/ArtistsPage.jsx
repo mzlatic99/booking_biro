@@ -159,7 +159,7 @@ export default function ArtistsPage() {
                 ? styles.isActive
                 : styles.notActive
             }>
-            {artist.name}
+            <span className={styles.artistsName}>{artist.name}</span>
             <button
               onClick={(e) => {
                 e.stopPropagation();

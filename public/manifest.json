@@ -4,7 +4,13 @@
   "icons": [
     {
       "src": "logo-google-touch.png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
