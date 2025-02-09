@@ -59,6 +59,7 @@ export default function ArtistsPage() {
 
   const [selectedArtist, setSelectedArtist] = useState(artists[0]);
   const [backgroundImageLoaded, setBackgroundImageLoaded] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 600px)');
@@ -117,12 +118,14 @@ export default function ArtistsPage() {
     if (selectedArtist?.id === artist.id) {
       navigate(`/artists/${artist.id}`);
     } else {
-      setSelectedArtist(artist);
-      setBackgroundImageLoaded(false);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setSelectedArtist(artist);
+        setBackgroundImageLoaded(false);
+        setIsTransitioning(false);
+      }, 300);
     }
   };
-
-  const handleButtonClick = (artist) => navigate(`/artists/${artist.id}`);
 
   const getBackgroundImage = () => {
     if (!selectedArtist) return 'placeholder-image.jpg';
@@ -132,20 +135,19 @@ export default function ArtistsPage() {
   };
 
   return (
-    <div
-      className={styles.main}
-      style={{
-        backgroundImage: `url(${
-          backgroundImageLoaded ? getBackgroundImage() : 'placeholder-image.jpg'
-        })`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        width: '100vw',
-        height: '100dvh',
-        display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-end',
-      }}>
+    <div className={styles.main}>
+      <div
+        className={`${styles.backgroundImage} ${
+          isTransitioning ? styles.fadeOut : ''
+        }`}
+        style={{
+          backgroundImage: `url(${
+            backgroundImageLoaded
+              ? getBackgroundImage()
+              : 'placeholder-image.jpg'
+          })`,
+        }}></div>
+
       <ul className={styles.list}>
         {artists.map((artist) => (
           <li
@@ -159,17 +161,7 @@ export default function ArtistsPage() {
                 ? styles.isActive
                 : styles.notActive
             }>
-            <span className={styles.artistsName}>{artist.name}</span>
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                handleButtonClick(artist);
-              }}
-              className={
-                selectedArtist?.id === artist.id
-                  ? styles.artistNavButtonActive
-                  : styles.artistNavButtonNotActive
-              }></button>
+            {artist.name}
           </li>
         ))}
       </ul>

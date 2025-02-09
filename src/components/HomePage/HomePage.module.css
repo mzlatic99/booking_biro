@@ -1,9 +1,3 @@
-.list {
-  list-style-type: none;
-  font-family: 'General Sans';
-  font-weight: 500;
-}
-
 .author {
   display: flex;
   position: fixed;
