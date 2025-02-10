@@ -72,6 +72,7 @@ input:-webkit-autofill:active {
 
 textarea {
   outline: none;
+  border-radius: 0;
   width: 100%;
   resize: vertical;
   max-height: 200px;
