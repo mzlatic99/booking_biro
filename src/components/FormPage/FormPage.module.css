@@ -25,8 +25,30 @@ input {
   width: 100%;
 }
 
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
+select:focus,
+textarea {
+  font-size: 16px;
+  padding: 1px 4px;
+}
+
 textarea {
   width: 100%;
+  resize: vertical;
+  max-height: 200px;
 }
 
 .cancel {
@@ -64,5 +86,25 @@ textarea {
 @media only screen and (min-width: 600px) {
   .form {
     max-width: 450px;
+  }
+
+  input[type='color'],
+  input[type='date'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='email'],
+  input[type='month'],
+  input[type='number'],
+  input[type='password'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='text'],
+  input[type='time'],
+  input[type='url'],
+  input[type='week'],
+  select:focus,
+  textarea {
+    font-size: 20px;
+    padding: 1px 4px;
   }
 }
