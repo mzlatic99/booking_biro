@@ -5,14 +5,16 @@ import nemanjaImage from '../../assets/images/nemanja/nemanja1_bw_16x9.jpg';
 import nemanjaMobileImage from '../../assets/images/nemanja/nemanja_mobile_bw1.jpg';
 import dunjalukImage from '../../assets/images/dunjaluk/dunjaluk_bw1.jpg';
 import dunjalukMobileImage from '../../assets/images/dunjaluk/dunjaluk_mobile_bw1.jpg';
-import nemecekImage from '../../assets/images/nemecek/nemecek_bw1.jpg';
-import nemecekMobileImage from '../../assets/images/nemecek/nemecek_mobile_bw1.jpg';
-import psecaplazaImage from '../../assets/images/psecaplaza/psecaplaza_bw1.png';
-import psecaplazaMobileImage from '../../assets/images/psecaplaza/psecaplaza_mobile_bw1.png';
+import maaliImage from '../../assets/images/maali/maali_bw1.png';
+import maaliMobileImage from '../../assets/images/maali/maali_mobile_bw1.png';
+import tannutuwaImage from '../../assets/images/tannutuwa/tannutuwa_bw1.png';
+import tannutuwaMobileImage from '../../assets/images/tannutuwa/tannutuwa_mobile_bw1.png';
 import funkshuiImage from '../../assets/images/funkshui/funkshui_bw1.png';
 import funkshuiMobileImage from '../../assets/images/funkshui/funkshui_mobile_bw1.png';
 import aracatacaImage from '../../assets/images/aracataca/aracataca_bw1.png';
 import aracatacaMobileImage from '../../assets/images/aracataca/aracataca_mobile_bw1.png';
+import eineImage from '../../assets/images/eine/eine_bw1.jpg';
+import eineMobileImage from '../../assets/images/eine/eine_mobile_bw1.png';
 
 export default function ArtistsPage() {
   const navigate = useNavigate();
@@ -34,16 +36,6 @@ export default function ArtistsPage() {
         image: { large: dunjalukImage, mobile: dunjalukMobileImage },
       },
       {
-        id: 'nemecek',
-        name: 'NEMEČEK',
-        image: { large: nemecekImage, mobile: nemecekMobileImage },
-      },
-      {
-        id: 'psecaplaza',
-        name: 'PSEĆA PLAŽA',
-        image: { large: psecaplazaImage, mobile: psecaplazaMobileImage },
-      },
-      {
         id: 'funkshui',
         name: 'FUNK SHUI',
         image: { large: funkshuiImage, mobile: funkshuiMobileImage },
@@ -52,6 +44,21 @@ export default function ArtistsPage() {
         id: 'aracataca',
         name: 'ARACATACA',
         image: { large: aracatacaImage, mobile: aracatacaMobileImage },
+      },
+      {
+        id: 'tannutuwa',
+        name: 'TANNU TUWA',
+        image: { large: tannutuwaImage, mobile: tannutuwaMobileImage },
+      },
+      {
+        id: 'maali',
+        name: 'MAALI',
+        image: { large: maaliImage, mobile: maaliMobileImage },
+      },
+      {
+        id: 'eine',
+        name: 'EINE',
+        image: { large: eineImage, mobile: eineMobileImage },
       },
     ],
     []

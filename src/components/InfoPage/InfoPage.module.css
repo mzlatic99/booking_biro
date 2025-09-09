@@ -32,7 +32,6 @@
 }
 
 .lauraInfo,
-.linaInfo,
 .address {
   padding-bottom: 17px;
 }
@@ -57,7 +56,6 @@
   }
 
   .lauraInfo,
-  .linaInfo,
   .address {
     padding-bottom: 22px;
   }

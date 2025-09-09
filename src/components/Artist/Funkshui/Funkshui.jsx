@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import funkshuiHeroImage from '../../../assets/images/funkshui/funkshui1.jpeg';
+import funkshuiHeroImage from '../../../assets/images/funkshui/funkshui1.jpg';
 import styles from '../Artist.module.css';
 
 export default function Funkshui() {

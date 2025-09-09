@@ -70,11 +70,6 @@ export default function InfoPage() {
           <p>Booking Agent</p>
           <p>laura@44bookingbiro.com</p>
         </div>
-        <div className={styles.linaInfo}>
-          <span className={styles.infoBoldText}>Lina Crgol</span>
-          <p>PR Agent</p>
-          <p>lina@44bookingbiro.com</p>
-        </div>
         <div className={styles.address}>
           <p>Zagreb, Croatia</p>
         </div>

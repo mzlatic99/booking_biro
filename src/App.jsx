@@ -9,9 +9,10 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import Nemanja from './components/Artist/Nemanja/Nemanja';
 import LoadingPage from './components/LoadingPage/LoadingPage';
 import Dunjaluk from './components/Artist/Dunjaluk/Dunjaluk';
-import Nemecek from './components/Artist/Nemecek/Nemecek';
+import TannuTuwa from './components/Artist/TannuTuwa/TannuTuwa';
+import Maali from './components/Artist/Maali/Maali';
+import Eine from './components/Artist/Eine/Eine';
 import './App.css';
-import PsecaPlaza from './components/Artist/PsecaPlaza/PsecaPlaza';
 import Funkshui from './components/Artist/Funkshui/Funkshui';
 import Aracataca from './components/Artist/Aracataca/Aracataca';
 
@@ -56,20 +57,24 @@ const App = () => {
                   element={<Dunjaluk />}
                 />
                 <Route
-                  path='/artists/nemecek'
-                  element={<Nemecek />}
-                />
-                <Route
-                  path='/artists/psecaplaza'
-                  element={<PsecaPlaza />}
-                />
-                <Route
                   path='/artists/funkshui'
                   element={<Funkshui />}
                 />
                 <Route
                   path='/artists/aracataca'
                   element={<Aracataca />}
+                />
+                <Route
+                  path='/artists/tannutuwa'
+                  element={<TannuTuwa />}
+                />
+                <Route
+                  path='/artists/maali'
+                  element={<Maali />}
+                />
+                <Route
+                  path='/artists/eine'
+                  element={<Eine />}
                 />
                 <Route
                   path='/info'
