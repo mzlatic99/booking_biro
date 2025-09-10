@@ -48,9 +48,9 @@ export default function Maali() {
           Maali is a Croatian singer-songwriter who is quickly being recognized
           as one of the most compelling new voices on the domestic music scene.
           A versatile musician – trumpet player, guitarist, and vocalist – Maali
-          has honed his craft as a member of bands such as Demetronomes, Luce,
-          and the Mimika Orchestra, as well as through numerous collaborations
-          with artists across genres.
+          has honed his craft as a member of bands such as Demetronomes, and the
+          Mimika Orchestra, as well as through numerous collaborations with
+          artists across genres.
         </span>
         <p>
           His debut studio album, "Maali", is a personal collection of original
