@@ -9,7 +9,6 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import Nemanja from './components/Artist/Nemanja/Nemanja';
 import LoadingPage from './components/LoadingPage/LoadingPage';
 import Dunjaluk from './components/Artist/Dunjaluk/Dunjaluk';
-import TannuTuwa from './components/Artist/TannuTuwa/TannuTuwa';
 import Maali from './components/Artist/Maali/Maali';
 import Eine from './components/Artist/Eine/Eine';
 import './App.css';
@@ -63,10 +62,6 @@ const App = () => {
                 <Route
                   path='/artists/aracataca'
                   element={<Aracataca />}
-                />
-                <Route
-                  path='/artists/tannutuwa'
-                  element={<TannuTuwa />}
                 />
                 <Route
                   path='/artists/maali'

@@ -7,8 +7,6 @@ import dunjalukImage from '../../assets/images/dunjaluk/dunjaluk_bw1.jpg';
 import dunjalukMobileImage from '../../assets/images/dunjaluk/dunjaluk_mobile_bw1.jpg';
 import maaliImage from '../../assets/images/maali/maali_bw1.png';
 import maaliMobileImage from '../../assets/images/maali/maali_mobile_bw1.png';
-import tannutuwaImage from '../../assets/images/tannutuwa/tannutuwa_bw1.png';
-import tannutuwaMobileImage from '../../assets/images/tannutuwa/tannutuwa_mobile_bw1.png';
 import funkshuiImage from '../../assets/images/funkshui/funkshui_bw1.png';
 import funkshuiMobileImage from '../../assets/images/funkshui/funkshui_mobile_bw1.png';
 import aracatacaImage from '../../assets/images/aracataca/aracataca_bw1.png';
@@ -44,11 +42,6 @@ export default function ArtistsPage() {
         id: 'aracataca',
         name: 'ARACATACA',
         image: { large: aracatacaImage, mobile: aracatacaMobileImage },
-      },
-      {
-        id: 'tannutuwa',
-        name: 'TANNU TUWA',
-        image: { large: tannutuwaImage, mobile: tannutuwaMobileImage },
       },
       {
         id: 'maali',
