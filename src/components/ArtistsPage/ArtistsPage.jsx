@@ -1,60 +1,67 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from './ArtistsPage.module.css';
-import nemanjaImage from '../../assets/images/nemanja/nemanja1_bw_16x9.jpg';
-import nemanjaMobileImage from '../../assets/images/nemanja/nemanja_mobile_bw1.jpg';
-import dunjalukImage from '../../assets/images/dunjaluk/dunjaluk_bw1.jpg';
-import dunjalukMobileImage from '../../assets/images/dunjaluk/dunjaluk_mobile_bw1.jpg';
-import maaliImage from '../../assets/images/maali/maali_bw1.png';
-import maaliMobileImage from '../../assets/images/maali/maali_mobile_bw1.png';
-import funkshuiImage from '../../assets/images/funkshui/funkshui_bw1.png';
-import funkshuiMobileImage from '../../assets/images/funkshui/funkshui_mobile_bw1.png';
-import aracatacaImage from '../../assets/images/aracataca/aracataca_bw1.png';
-import aracatacaMobileImage from '../../assets/images/aracataca/aracataca_mobile_bw1.png';
-import eineImage from '../../assets/images/eine/eine_bw1.jpg';
-import eineMobileImage from '../../assets/images/eine/eine_mobile_bw1.png';
+import React, { useState, useEffect, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
+import styles from "./ArtistsPage.module.css";
+import nemanjaImage from "../../assets/images/nemanja/nemanja1_bw_16x9.jpg";
+import nemanjaMobileImage from "../../assets/images/nemanja/nemanja_mobile_bw1.jpg";
+import dunjalukImage from "../../assets/images/dunjaluk/dunjaluk_bw1.jpg";
+import dunjalukMobileImage from "../../assets/images/dunjaluk/dunjaluk_mobile_bw1.jpg";
+import maaliImage from "../../assets/images/maali/maali_bw1.png";
+import maaliMobileImage from "../../assets/images/maali/maali_mobile_bw1.png";
+import funkshuiImage from "../../assets/images/funkshui/funkshui_bw1.png";
+import funkshuiMobileImage from "../../assets/images/funkshui/funkshui_mobile_bw1.png";
+import aracatacaImage from "../../assets/images/aracataca/aracataca_bw1.png";
+import aracatacaMobileImage from "../../assets/images/aracataca/aracataca_mobile_bw1.png";
+import eineImage from "../../assets/images/eine/eine_bw1.jpg";
+import eineMobileImage from "../../assets/images/eine/eine_mobile_bw1.png";
+import otokImage from "../../assets/images/otok/otok_bw1.jpg";
+import otokMobileImage from "../../assets/images/otok/otok_mobile_bw1.jpg";
 
 export default function ArtistsPage() {
   const navigate = useNavigate();
 
   const [isMobileView, setIsMobileView] = useState(
-    window.matchMedia('(max-width: 600px)').matches
+    window.matchMedia("(max-width: 600px)").matches,
   );
 
   const artists = useMemo(
     () => [
       {
-        id: 'nemanja',
-        name: 'NEMANJA',
+        id: "nemanja",
+        name: "NEMANJA",
         image: { large: nemanjaImage, mobile: nemanjaMobileImage },
       },
       {
-        id: 'dunjaluk',
-        name: 'DUNJALUK',
+        id: "dunjaluk",
+        name: "DUNJALUK",
         image: { large: dunjalukImage, mobile: dunjalukMobileImage },
       },
       {
-        id: 'funkshui',
-        name: 'FUNK SHUI',
+        id: "funkshui",
+        name: "FUNK SHUI",
         image: { large: funkshuiImage, mobile: funkshuiMobileImage },
       },
       {
-        id: 'aracataca',
-        name: 'ARACATACA',
+        id: "aracataca",
+        name: "ARACATACA",
         image: { large: aracatacaImage, mobile: aracatacaMobileImage },
       },
       {
-        id: 'maali',
-        name: 'MAALI',
+        id: "maali",
+        name: "MAALI",
         image: { large: maaliImage, mobile: maaliMobileImage },
       },
       {
-        id: 'eine',
-        name: 'EINE',
+        id: "eine",
+        name: "EINE",
         image: { large: eineImage, mobile: eineMobileImage },
       },
+      {
+        id: "otok",
+        name: "OTOK",
+        image: { large: otokImage, mobile: otokMobileImage },
+      },
     ],
-    []
+    [],
   );
 
   const [selectedArtist, setSelectedArtist] = useState(artists[0]);
@@ -62,11 +69,11 @@ export default function ArtistsPage() {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 600px)');
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
     const handleMediaChange = (e) => setIsMobileView(e.matches);
 
-    mediaQuery.addEventListener('change', handleMediaChange);
-    return () => mediaQuery.removeEventListener('change', handleMediaChange);
+    mediaQuery.addEventListener("change", handleMediaChange);
+    return () => mediaQuery.removeEventListener("change", handleMediaChange);
   }, []);
 
   useEffect(() => {
@@ -81,32 +88,32 @@ export default function ArtistsPage() {
 
   useEffect(() => {
     const disableScrollAndZoom = () => {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
 
       const preventZoom = (event) => {
         if (event.ctrlKey || event.touches?.length > 1) event.preventDefault();
       };
       const preventGesture = (event) => event.preventDefault();
 
-      document.addEventListener('wheel', preventZoom, { passive: false });
-      document.addEventListener('gesturestart', preventGesture, {
+      document.addEventListener("wheel", preventZoom, { passive: false });
+      document.addEventListener("gesturestart", preventGesture, {
         passive: false,
       });
-      document.addEventListener('gesturechange', preventGesture, {
+      document.addEventListener("gesturechange", preventGesture, {
         passive: false,
       });
-      document.addEventListener('gestureend', preventGesture, {
+      document.addEventListener("gestureend", preventGesture, {
         passive: false,
       });
-      document.addEventListener('touchmove', preventZoom, { passive: false });
+      document.addEventListener("touchmove", preventZoom, { passive: false });
 
       return () => {
-        document.body.style.overflow = 'auto';
-        document.removeEventListener('wheel', preventZoom);
-        document.removeEventListener('gesturestart', preventGesture);
-        document.removeEventListener('gesturechange', preventGesture);
-        document.removeEventListener('gestureend', preventGesture);
-        document.removeEventListener('touchmove', preventZoom);
+        document.body.style.overflow = "auto";
+        document.removeEventListener("wheel", preventZoom);
+        document.removeEventListener("gesturestart", preventGesture);
+        document.removeEventListener("gesturechange", preventGesture);
+        document.removeEventListener("gestureend", preventGesture);
+        document.removeEventListener("touchmove", preventZoom);
       };
     };
 
@@ -128,7 +135,7 @@ export default function ArtistsPage() {
   };
 
   const getBackgroundImage = () => {
-    if (!selectedArtist) return 'placeholder-image.jpg';
+    if (!selectedArtist) return "placeholder-image.jpg";
     return isMobileView
       ? selectedArtist.image.mobile
       : selectedArtist.image.large;
@@ -138,15 +145,16 @@ export default function ArtistsPage() {
     <div className={styles.main}>
       <div
         className={`${styles.backgroundImage} ${
-          isTransitioning ? styles.fadeOut : ''
+          isTransitioning ? styles.fadeOut : ""
         }`}
         style={{
           backgroundImage: `url(${
             backgroundImageLoaded
               ? getBackgroundImage()
-              : 'placeholder-image.jpg'
+              : "placeholder-image.jpg"
           })`,
-        }}></div>
+        }}
+      ></div>
 
       <ul className={styles.list}>
         {artists.map((artist) => (
@@ -160,7 +168,8 @@ export default function ArtistsPage() {
               selectedArtist?.id === artist.id
                 ? styles.isActive
                 : styles.notActive
-            }>
+            }
+          >
             {artist.name}
           </li>
         ))}
