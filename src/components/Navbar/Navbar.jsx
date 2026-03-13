@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import styles from './Navbar.module.css';
-import { ReactComponent as SvgLogo } from '../../assets/logo/logo-small.svg';
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import styles from "./Navbar.module.css";
+import { ReactComponent as SvgLogo } from "../../assets/logo/logo-small.svg";
 
 const Navbar = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.pathname === "/";
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const [burgerClass, setBurgerClass] = useState(
-    `${styles.burgerBar} ${styles.unclicked}`
+    `${styles.burgerBar} ${styles.unclicked}`,
   );
   const [menuClass, setMenuClass] = useState(`${styles.menu} ${styles.hidden}`);
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const updateMenu = () => {
@@ -40,15 +40,13 @@ const Navbar = () => {
   return (
     <div className={styles.main}>
       <nav className={styles.nav}>
-        <NavLink to='/'>
+        <NavLink to="/">
           {!(isHomePage && screenWidth >= 600) && (
             <SvgLogo className={[styles.logoNav]} />
           )}
         </NavLink>
 
-        <div
-          className={styles.burgerMenu}
-          onClick={updateMenu}>
+        <div className={styles.burgerMenu} onClick={updateMenu}>
           <div className={burgerClass}></div>
           <div className={burgerClass}></div>
           <div className={burgerClass}></div>
@@ -60,19 +58,30 @@ const Navbar = () => {
             <NavLink
               to={`${process.env.PUBLIC_URL}/`}
               className={({ isActive }) =>
-                isActive ? styles['active-link'] : styles['inactive-link']
+                isActive ? styles["active-link"] : styles["inactive-link"]
               }
-              onClick={handleMenuItemClick}>
+              onClick={handleMenuItemClick}
+            >
               Home
             </NavLink>
+          </li>
+          <li>
+            <a
+              href="https://tickets.44bookingbiro.com/"
+              className={styles["inactive-link"]}
+              onClick={handleMenuItemClick}
+            >
+              Our events
+            </a>
           </li>
           <li>
             <NavLink
               to={`${process.env.PUBLIC_URL}/artists`}
               className={({ isActive }) =>
-                isActive ? styles['active-link'] : styles['inactive-link']
+                isActive ? styles["active-link"] : styles["inactive-link"]
               }
-              onClick={handleMenuItemClick}>
+              onClick={handleMenuItemClick}
+            >
               Artists
             </NavLink>
           </li>
@@ -80,9 +89,10 @@ const Navbar = () => {
             <NavLink
               to={`${process.env.PUBLIC_URL}/info`}
               className={({ isActive }) =>
-                isActive ? styles['active-link'] : styles['inactive-link']
+                isActive ? styles["active-link"] : styles["inactive-link"]
               }
-              onClick={handleMenuItemClick}>
+              onClick={handleMenuItemClick}
+            >
               Info
             </NavLink>
           </li>
@@ -90,9 +100,10 @@ const Navbar = () => {
             <NavLink
               to={`${process.env.PUBLIC_URL}/form`}
               className={({ isActive }) =>
-                isActive ? styles['active-link'] : styles['inactive-link']
+                isActive ? styles["active-link"] : styles["inactive-link"]
               }
-              onClick={handleMenuItemClick}>
+              onClick={handleMenuItemClick}
+            >
               Let's talk
             </NavLink>
           </li>
