@@ -35,8 +35,8 @@
   color: #b90000;
   cursor: pointer;
   font-weight: 700;
-  font-size: 40px;
-  height: 54px;
+  font-size: 35px;
+  height: 50px;
   border-bottom: 4px solid #b90000;
 }
 
@@ -44,8 +44,8 @@
   color: rgba(185, 0, 0, 0.4);
   cursor: pointer;
   font-weight: 700;
-  font-size: 40px;
-  height: 54px;
+  font-size: 35px;
+  height: 50px;
   transition: color 0.3s ease-out;
 }
 
@@ -53,18 +53,18 @@
   color: #b90000;
 }
 
-@media only screen and (min-width: 800px) and (min-height: 670px) {
+@media only screen and (min-width: 800px) and (min-height: 756px) {
   .isActive {
-    font-size: 80px;
-    line-height: 80px;
+    font-size: 60px;
+    line-height: 60px;
     border-bottom: 6px solid #b90000;
-    height: 82px;
+    height: 62px;
   }
 
   .notActive {
-    font-size: 80px;
-    line-height: 80px;
-    height: 82px;
+    font-size: 60px;
+    line-height: 60px;
+    height: 62px;
   }
 
   .list {
@@ -78,16 +78,16 @@
 
 @media only screen and (min-width: 1200px) and (min-height: 900px) {
   .isActive {
-    font-size: 100px;
-    line-height: 100px;
+    font-size: 75px;
+    line-height: 75px;
     border-bottom: 8px solid #b90000;
-    height: 102px;
+    height: 77px;
   }
 
   .notActive {
-    font-size: 100px;
-    line-height: 100px;
-    height: 102px;
+    font-size: 75px;
+    line-height: 75px;
+    height: 77px;
   }
 
   .list {

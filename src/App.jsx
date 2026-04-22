@@ -15,6 +15,9 @@ import "./App.css";
 import Funkshui from "./components/Artist/Funkshui/Funkshui";
 import Aracataca from "./components/Artist/Aracataca/Aracataca";
 import Otok from "./components/Artist/Otok/Otok";
+import Seine from "./components/Artist/Seine/Seine";
+import Dzipsii from "./components/Artist/Dzipsii/Dzipsii";
+import Lovski from "./components/Artist/Lovski/Lovski";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -46,9 +49,12 @@ const App = () => {
                 <Route path="/artists/dunjaluk" element={<Dunjaluk />} />
                 <Route path="/artists/funkshui" element={<Funkshui />} />
                 <Route path="/artists/aracataca" element={<Aracataca />} />
+                <Route path="/artists/seine" element={<Seine />} />
+                <Route path="/artists/dzipsii" element={<Dzipsii />} />
                 <Route path="/artists/maali" element={<Maali />} />
                 <Route path="/artists/eine" element={<Eine />} />
                 <Route path="/artists/otok" element={<Otok />} />
+                <Route path="/artists/lovski" element={<Lovski />} />
                 <Route path="/info" element={<InfoPage />} />
                 <Route path="/form" element={<FormPage />} />
                 <Route path="*" element={<ErrorPage />} />

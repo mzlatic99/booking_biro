@@ -133,7 +133,7 @@
   .menu {
     width: 50%;
     top: 0;
-    height: 3.5em;
+    height: 3.8em;
     overflow: auto;
   }
 
@@ -154,5 +154,8 @@
 @media only screen and (min-width: 700px) {
   .menuItems li a {
     font-size: 20px;
+  }
+  .menu {
+    height: 4.5em;
   }
 }

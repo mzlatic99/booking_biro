@@ -20,6 +20,10 @@
   text-align: left;
 }
 
+.nemanjaHeroImage {
+  object-position: top;
+}
+
 main {
   width: 100%;
   padding: 20px;

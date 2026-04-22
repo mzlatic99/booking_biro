@@ -66,15 +66,6 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <a
-              href="https://tickets.44bookingbiro.com/"
-              className={styles["inactive-link"]}
-              onClick={handleMenuItemClick}
-            >
-              Our events
-            </a>
-          </li>
-          <li>
             <NavLink
               to={`${process.env.PUBLIC_URL}/artists`}
               className={({ isActive }) =>
@@ -84,6 +75,15 @@ const Navbar = () => {
             >
               Artists
             </NavLink>
+          </li>
+          <li>
+            <a
+              href="https://tickets.44bookingbiro.com/"
+              className={styles["inactive-link"]}
+              onClick={handleMenuItemClick}
+            >
+              Our events
+            </a>
           </li>
           <li>
             <NavLink

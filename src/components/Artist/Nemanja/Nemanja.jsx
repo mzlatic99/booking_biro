@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import nemanjaHeroImage from '../../../assets/images/nemanja/nemanja1_16x9.jpg';
-import styles from '../Artist.module.css';
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import nemanjaHeroImage from "../../../assets/images/nemanja/nemanja1_16x9.png";
+import styles from "../Artist.module.css";
 
 export default function Nemanja() {
   useEffect(() => {
@@ -14,22 +14,22 @@ export default function Nemanja() {
 
     const preventGesture = (event) => event.preventDefault();
 
-    document.addEventListener('wheel', preventZoom, { passive: false });
-    document.addEventListener('gesturestart', preventGesture, {
+    document.addEventListener("wheel", preventZoom, { passive: false });
+    document.addEventListener("gesturestart", preventGesture, {
       passive: false,
     });
-    document.addEventListener('gesturechange', preventGesture, {
+    document.addEventListener("gesturechange", preventGesture, {
       passive: false,
     });
-    document.addEventListener('gestureend', preventGesture, { passive: false });
-    document.addEventListener('touchmove', preventZoom, { passive: false });
+    document.addEventListener("gestureend", preventGesture, { passive: false });
+    document.addEventListener("touchmove", preventZoom, { passive: false });
 
     return () => {
-      document.removeEventListener('wheel', preventZoom);
-      document.removeEventListener('gesturestart', preventGesture);
-      document.removeEventListener('gesturechange', preventGesture);
-      document.removeEventListener('gestureend', preventGesture);
-      document.removeEventListener('touchmove', preventZoom);
+      document.removeEventListener("wheel", preventZoom);
+      document.removeEventListener("gesturestart", preventGesture);
+      document.removeEventListener("gesturechange", preventGesture);
+      document.removeEventListener("gestureend", preventGesture);
+      document.removeEventListener("touchmove", preventZoom);
     };
   }, []);
 
@@ -38,65 +38,71 @@ export default function Nemanja() {
       <div className={styles.artistHero}>
         <img
           src={nemanjaHeroImage}
-          alt='profile'
-          className={styles.artistHeroImage}
+          alt="profile"
+          className={`${styles.artistHeroImage} ${styles.nemanjaHeroImage}`}
         />
         <h1>NEMANJA</h1>
       </div>
       <main>
         <span className={styles.description}>
-          nemanja is a global psych band bringing together members from Pula and
-          Zagreb, inspired by 70's Afro-Colombian, Turkish, Thai, and world
-          music, spearheaded by Luka Šipetić with albums Tarot Funk, Cosmic
-          Disco, and Voodoo Beat. The live band members are Ana Kovačić (sax,
-          synth), Laura Matijašević (bass), Đuro Dobranić (drums), Laura
-          Tandarić (percussion, vocals), and Luka Šipetić (guitar, vocals).
+          nemanja is an Adriatic psych-groove band formed by musicians from Pula
+          and Zagreb, Croatia. Rooted in global groove traditions, the project
+          merges psychedelic funk, tropical rhythms, cosmic disco and
+          dancefloor-driven textures into a distinctive Mediterranean sound
+          shaped by bandleader Luka Šipetić.
         </span>
         <p>
-          The band is currently promoting their third album, Voodoo Beat, which
-          presents a danceable and exciting musical melting pot of hot
-          Afro-Colombian rhythms, Caribbean dub sounds, and tropical exotica,
-          inspired by the ancient myth of Orpheus and Eurydice. It also draws
-          inspiration from films like Orpheus (Jean Cocteau, 1950) and Black
-          Orpheus (Marcel Camus, 1959). In addition to its intriguing musical
-          influences, the albums stand out for their narrative concept that
-          spans all three records, referencing tarot, Buddhism, and ancient
-          myths, forming what they call the "Esoteric Trilogy." Tarot Funk
-          portrays the last moments before nemanja's death through tarot cards
-          and sounds inspired by 70s Anatolian rock; Cosmic Disco follows
-          nemanja's journey through the bardo, the underworld, guided by the
-          Tibetan Book of the Dead, with influences from African and Asian disco
-          of the 70s and 80s; and Voodoo Beat concludes the "Esoteric Trilogy,"
-          where nemanja attempts to return from the land of the dead with the
-          help of voodoo powers of love and an Afro-Colombian sound.
+          Over the course of three acclaimed albums — Tarot Funk (2019), Cosmic
+          Disco (2020) and Voodoo Beat (2023) — nemanja developed a singular
+          musical universe that established the band as one of the most
+          distinctive groove-oriented acts to emerge from the Balkans in recent
+          years. Together, the records form the “Esoteric Trilogy”: a conceptual
+          arc drawing from tarot, Buddhism, ancient mythologies and ritual
+          storytelling, filtered through 70s Anatolian rock, Afro-Asian disco,
+          Caribbean dub, tropical psychedelia and cinematic world-building.
+          Since launching in 2019, nemanja has built a strong live reputation
+          across the region, performing extensively throughout the Balkans and
+          appearing at key international and showcase events including Eurosonic
+          Noorderslag (ESNS), MENT Ljubljana and SHIP Festival. Despite emerging
+          during the pandemic era, the band maintained steady momentum and
+          became a recurring presence on year-end best-of lists and critics’
+          polls across Croatia, Serbia, Bosnia and Herzegovina, Slovenia, and
+          beyond.
         </p>
         <iframe
-          src='https://www.youtube.com/embed/zmRe9fo8Sw4?si=0SOkecREhW2q9E_d'
-          title='YouTube video player'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-          referrerPolicy='strict-origin-when-cross-origin'
-          allowFullScreen></iframe>
+          src="https://www.youtube.com/embed/hlG3-dt0nNo?si=sLYPm0TZly5GrG3d"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
         <p>
-          The band has been performing actively since June 2019, and despite the
-          pandemic, they have played throughout the region, including at the
-          prestigious ESNS festival in the Netherlands and showcase festivals in
-          the region such as MENT and SHIP, as well as festivals like INmusic
-          and Arsenal. Renowned music publications and critics from across the
-          region have consistently placed Tarot Funk, Cosmic Disco, and Voodoo
-          Beat at the top of the best albums lists in the region for 2019, 2020,
-          and 2023. These albums have frequently appeared on year-end lists from
-          music portals in Serbia, Bosnia and Herzegovina, Slovenia, Germany,
-          France, and the United Kingdom.
+          In April 2026, nemanja opens a new chapter with the double single Asja
+          / Kada te nima tu, the first glimpse of a forthcoming album due in
+          late 2026. The new material marks a clear shift in sonic direction:
+          from the esoteric, tropical psych of the trilogy toward a more
+          song-driven, Mediterranean dance sensibility that folds Balearic pop,
+          Adriatic soft rock, Anatolian pulse, samba-inflected groove and
+          leftfield funk into the band’s evolving language. It is both a
+          continuation and a reinvention — a more intimate, melodic and
+          expansive phase aimed equally at the stage, the dancefloor and
+          international audiences.
+        </p>
+
+        <p>
+          The live lineup features Luka Šipetić (guitar, vocals), Laura
+          Matijašević (bass), Laura Tandarić (percussion, vocals), Elizabeta
+          Marijanović (synths, backing vocals), and Đuro Dobranić (drums).
         </p>
 
         <div className={styles.links}>
-          <a href='https://www.youtube.com/@nemanjaband'>Youtube</a>
-          <a href='https://open.spotify.com/artist/4kLvPkhSzcYKQYsb1StfeB'>
+          <a href="https://www.youtube.com/@nemanjaband">Youtube</a>
+          <a href="https://open.spotify.com/artist/4kLvPkhSzcYKQYsb1StfeB">
             Spotify
           </a>
-          <a href='https://nemanja.bandcamp.com/'>Bandcamp</a>
-          <a href='https://www.instagram.com/nemanjabend/'>Instagram</a>
-          <a href='https://www.facebook.com/nemanja.hr/?locale=hr_HR'>
+          <a href="https://nemanja.bandcamp.com/">Bandcamp</a>
+          <a href="https://www.instagram.com/nemanjabend/">Instagram</a>
+          <a href="https://www.facebook.com/nemanja.hr/?locale=hr_HR">
             Facebook
           </a>
         </div>

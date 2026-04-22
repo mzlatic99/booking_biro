@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ArtistsPage.module.css";
-import nemanjaImage from "../../assets/images/nemanja/nemanja1_bw_16x9.jpg";
-import nemanjaMobileImage from "../../assets/images/nemanja/nemanja_mobile_bw1.jpg";
+import nemanjaImage from "../../assets/images/nemanja/nemanja1_bw_16x9.png";
+import nemanjaMobileImage from "../../assets/images/nemanja/nemanja_mobile_bw1.png";
 import dunjalukImage from "../../assets/images/dunjaluk/dunjaluk_bw1.jpg";
 import dunjalukMobileImage from "../../assets/images/dunjaluk/dunjaluk_mobile_bw1.jpg";
 import maaliImage from "../../assets/images/maali/maali_bw1.png";
@@ -15,6 +15,12 @@ import eineImage from "../../assets/images/eine/eine_bw1.jpg";
 import eineMobileImage from "../../assets/images/eine/eine_mobile_bw1.png";
 import otokImage from "../../assets/images/otok/otok_bw1.jpg";
 import otokMobileImage from "../../assets/images/otok/otok_mobile_bw1.jpg";
+import seineImage from "../../assets/images/seine/seines_bw1.png";
+import seineMobileImage from "../../assets/images/seine/seine_mobile_bw1.png";
+import dzipsiiImage from "../../assets/images/dzipsii/dzipsii_bw1.png";
+import dzipsiiMobileImage from "../../assets/images/dzipsii/dzipsii_mobile_bw1.png";
+import lovskiImage from "../../assets/images/lovski/lovski_bw1.png";
+import lovskiMobileImage from "../../assets/images/lovski/lovski_mobile_bw1.png";
 
 export default function ArtistsPage() {
   const navigate = useNavigate();
@@ -46,6 +52,16 @@ export default function ArtistsPage() {
         image: { large: aracatacaImage, mobile: aracatacaMobileImage },
       },
       {
+        id: "seine",
+        name: "SEINE",
+        image: { large: seineImage, mobile: seineMobileImage },
+      },
+      {
+        id: "dzipsii",
+        name: "DZIPSII",
+        image: { large: dzipsiiImage, mobile: dzipsiiMobileImage },
+      },
+      {
         id: "maali",
         name: "MAALI",
         image: { large: maaliImage, mobile: maaliMobileImage },
@@ -59,6 +75,11 @@ export default function ArtistsPage() {
         id: "otok",
         name: "OTOK",
         image: { large: otokImage, mobile: otokMobileImage },
+      },
+      {
+        id: "lovski",
+        name: "LOVSKI",
+        image: { large: lovskiImage, mobile: lovskiMobileImage },
       },
     ],
     [],
@@ -153,6 +174,12 @@ export default function ArtistsPage() {
               ? getBackgroundImage()
               : "placeholder-image.jpg"
           })`,
+          backgroundPosition:
+            selectedArtist?.id === "dzipsii"
+              ? "center bottom"
+              : selectedArtist?.id === "nemanja"
+                ? "center top"
+                : "center",
         }}
       ></div>
 
