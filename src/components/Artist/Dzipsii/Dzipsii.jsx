@@ -39,7 +39,7 @@ export default function Dzipsii() {
         <img
           src={dzipsiiHeroImage}
           alt="profile"
-          className={styles.artistHeroImage}
+          className={`${styles.artistHeroImage} ${styles.dzipsiiHeroImage}`}
         />
         <h1>DZIPSII</h1>
       </div>

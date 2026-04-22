@@ -21,7 +21,13 @@
 }
 
 .nemanjaHeroImage {
+  object-fit: cover;
   object-position: top;
+}
+
+.dzipsiiHeroImage {
+  object-fit: cover;
+  object-position: bottom;
 }
 
 main {
