@@ -43,6 +43,23 @@
   mix-blend-mode: difference;
 }
 
+.imagePlaceholders {
+  position: absolute;
+  bottom: 1.25em;
+  right: 1.25em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.placeholderImage {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 @media only screen and (min-width: 600px) {
   .infoMain {
     font-size: 20px;
@@ -58,5 +75,16 @@
   .lauraInfo,
   .address {
     padding-bottom: 22px;
+  }
+
+  .imagePlaceholders {
+    right: 1em;
+    bottom: 1.25em;
+    flex-direction: row; /* Desktop */
+    align-items: center;
+  }
+
+  .placeholderImage {
+    height: 40px;
   }
 }
