@@ -7,8 +7,6 @@ import dunjalukImage from "../../assets/images/dunjaluk/dunjaluk_bw1.jpg";
 import dunjalukMobileImage from "../../assets/images/dunjaluk/dunjaluk_mobile_bw1.jpg";
 import maaliImage from "../../assets/images/maali/maali_bw1.png";
 import maaliMobileImage from "../../assets/images/maali/maali_mobile_bw1.png";
-import funkshuiImage from "../../assets/images/funkshui/funkshui_bw1.png";
-import funkshuiMobileImage from "../../assets/images/funkshui/funkshui_mobile_bw1.png";
 import aracatacaImage from "../../assets/images/aracataca/aracataca_bw1.png";
 import aracatacaMobileImage from "../../assets/images/aracataca/aracataca_mobile_bw1.png";
 import eineImage from "../../assets/images/eine/eine_bw1.jpg";
@@ -40,11 +38,6 @@ export default function ArtistsPage() {
         id: "dunjaluk",
         name: "DUNJALUK",
         image: { large: dunjalukImage, mobile: dunjalukMobileImage },
-      },
-      {
-        id: "funkshui",
-        name: "FUNK SHUI",
-        image: { large: funkshuiImage, mobile: funkshuiMobileImage },
       },
       {
         id: "aracataca",

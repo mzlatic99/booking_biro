@@ -93,6 +93,12 @@ export default function InfoPage() {
           alt="Co-funded by the European Union"
           className={styles.placeholderImage}
         />
+
+        <div className={styles.eu}>
+          <p>Financira Europska unija – NextGenerationEU.</p>
+
+          <p>Nacionalni zajmovi za obrtna sredstva</p>
+        </div>
       </div>
     </div>
   );

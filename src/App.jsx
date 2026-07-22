@@ -12,7 +12,6 @@ import Dunjaluk from "./components/Artist/Dunjaluk/Dunjaluk";
 import Maali from "./components/Artist/Maali/Maali";
 import Eine from "./components/Artist/Eine/Eine";
 import "./App.css";
-import Funkshui from "./components/Artist/Funkshui/Funkshui";
 import Aracataca from "./components/Artist/Aracataca/Aracataca";
 import Otok from "./components/Artist/Otok/Otok";
 import Seine from "./components/Artist/Seine/Seine";
@@ -47,7 +46,6 @@ const App = () => {
                 <Route path="/artists" element={<ArtistsPage />} />
                 <Route path="/artists/nemanja" element={<Nemanja />} />
                 <Route path="/artists/dunjaluk" element={<Dunjaluk />} />
-                <Route path="/artists/funkshui" element={<Funkshui />} />
                 <Route path="/artists/aracataca" element={<Aracataca />} />
                 <Route path="/artists/seine" element={<Seine />} />
                 <Route path="/artists/dzipsii" element={<Dzipsii />} />
